@@ -23,11 +23,10 @@
   const prayerSchedule = document.querySelector('[data-prayer-schedule]');
   if (prayerSchedule) {
     const prayerDate = document.querySelector('[data-prayer-date]');
-    const cityId = 'eda80a3d5b344bc40f3bc04f65b7a357';
-    fetch(`https://api.myquran.com/v3/sholat/jadwal/${cityId}/today?tz=Asia/Jakarta`)
+    fetch('/api/prayer-times')
       .then((response) => { if (!response.ok) throw new Error('Jadwal tidak tersedia'); return response.json(); })
       .then((response) => {
-        const schedule = response?.data?.jadwal || response?.data;
+        const schedule = response?.schedule;
         const times = [['Subuh', schedule?.subuh], ['Zuhur', schedule?.dzuhur], ['Asar', schedule?.ashar], ['Maghrib', schedule?.maghrib], ['Isya', schedule?.isya]];
         if (times.some(([, time]) => !time)) throw new Error('Format jadwal tidak tersedia');
         prayerSchedule.innerHTML = times.map(([name, time]) => `<div class="prayer-time"><span>${name}</span><strong>${time}</strong></div>`).join('');

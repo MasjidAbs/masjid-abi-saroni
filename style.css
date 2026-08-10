@@ -297,3 +297,10 @@ body:not(.page-top) .nav-links a:hover,body:not(.page-top) .nav-links a.active,b
   color: #007a99;
   text-decoration: underline;
 }
+
+/* Balance the header alignment and deepen the home-page palette. */
+body:not(.page-top) .navigation{width:min(1320px,94%)}
+.home-intro{background:#dcece6}.home-intro .eyebrow{color:#116861}
+.pillars-section{background:#073f3d}.pillars-section .eyebrow{color:#a8e3d7}.pillars-section .section-heading h2{color:#fff}.pillars-section .section-heading>p{color:rgba(255,255,255,.72)}.pillar-card{background:#0d514e;border-color:rgba(168,227,215,.19);color:#fff}.pillar-card span{color:#a8e3d7}.pillar-card p{color:rgba(255,255,255,.7)}
+.home-split{background:#f2ede3}.programs-section{background:#e7f1ed}.program-card{background:#fffdf9;border-color:#d8e5df}.program-number{color:#b2762d}.home-cta{background:linear-gradient(135deg,#073f3d,#0e625c)}
+.prayer-section{background:#dcece6}.prayer-card{background:linear-gradient(125deg,#073f3d,#0d5752)}
