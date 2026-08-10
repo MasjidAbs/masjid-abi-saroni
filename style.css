@@ -16,3 +16,11 @@ footer{padding:55px 0 25px;background:var(--deep);color:#fff;margin-top:100px}.f
 .floating-wa svg{width:26px;height:26px;fill:currentColor}
 .nav-group{position:relative}.nav-group-trigger{border:0;background:transparent;color:inherit;font:inherit;font-weight:700;cursor:pointer;padding:0;white-space:nowrap}.nav-group-trigger span{font-size:1rem;margin-left:3px}.nav-group.active>.nav-group-trigger,.nav-group-trigger:hover{color:var(--mint)}.nav-submenu{display:none;position:absolute;top:calc(100% + 14px);left:-16px;z-index:20;min-width:230px;padding:10px;list-style:none;border-radius:14px;background:#fff;color:var(--ink);box-shadow:var(--shadow);font-size:.72rem}.nav-group.open>.nav-submenu{display:grid;gap:2px}.nav-submenu a{display:block;padding:9px 10px;border-radius:8px}.nav-submenu a:hover{background:#eef6f3;color:var(--teal)}
 @media(max-width:800px){.nav-group{width:100%}.nav-group-trigger{width:100%;text-align:left;padding:8px 0;color:#fff}.nav-submenu{position:static;min-width:0;margin:4px 0 2px;padding:5px;background:rgba(255,255,255,.1);color:#fff;box-shadow:none}.nav-submenu a{padding:8px 10px}.nav-submenu a:hover{background:rgba(255,255,255,.12);color:var(--mint)}}
+
+/* Homepage header refinements */
+.brand-mark{background:#fff;border-color:rgba(255,255,255,.65)}
+.brand-logo{padding:4px}
+.hero h1{font-size:clamp(3.7rem,6.2vw,5.9rem);line-height:.98;max-width:900px}
+.hero-tagline{font:clamp(1.35rem,2.6vw,2.25rem)/1.15 'DM Serif Display',serif!important;margin:0 0 16px!important;color:#fff!important}
+.hero-tagline em{color:var(--mint);font-style:italic}
+@media(min-width:801px){.nav-group:hover>.nav-submenu{display:grid}.nav-group:hover>.nav-group-trigger{color:var(--mint)}}
