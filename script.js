@@ -23,10 +23,10 @@
   const prayerSchedule = document.querySelector('[data-prayer-schedule]');
   if (prayerSchedule) {
     const prayerDate = document.querySelector('[data-prayer-date]');
-    fetch('https://www.muslimkita.id/api/jadwal-sholat/v1/kediri?metode=kemenag')
+    fetch('/api/prayer-times')
       .then((response) => { if (!response.ok) throw new Error('Jadwal tidak tersedia'); return response.json(); })
       .then((response) => {
-        const schedule = response?.jadwal;
+        const schedule = response?.schedule || response?.jadwal;
         const times = [['Subuh', schedule?.subuh, '&#9728;'], ['Zuhur', schedule?.dzuhur, '&#9788;'], ['Asar', schedule?.ashar, '&#9728;'], ['Maghrib', schedule?.maghrib, '&#9789;'], ['Isya', schedule?.isya, '&#9790;']];
         if (times.some(([, time]) => !time)) throw new Error('Format jadwal tidak tersedia');
         prayerSchedule.innerHTML = times.map(([name, time, icon]) => `<div class="prayer-time"><i class="prayer-icon">${icon}</i><span>${name}</span><strong>${time}</strong></div>`).join('');
