@@ -17,8 +17,8 @@ window.SITE_CONFIG = {
     logo: "assets/images/logo-masjid.png",
     hero: [
       "assets/images/foto-masjid.jpeg",
-      "assets/images/foto-kegiatan-1.jpeg",
-      "assets/images/foto-kegiatan-2.jpeg"
+      "assets/images/foto-kegiatan-1.png",
+      "assets/images/foto-kegiatan-2.jpg"
     ]
   }
 };
