@@ -71,3 +71,29 @@
     setTimeout(() => { button.textContent = 'Salin nomor rekening'; }, 2400);
   }));
 })();
+// Filter Program Masjid
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const programCards = document.querySelectorAll('.program-card');
+
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Ubah tombol aktif
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-category');
+
+        // Filter kartu
+        programCards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+});

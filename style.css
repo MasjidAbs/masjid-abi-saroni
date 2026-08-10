@@ -43,3 +43,125 @@ body:not(.page-top) .nav-links a:hover,body:not(.page-top) .nav-links a.active,b
 .hero-home .button.secondary{border-color:rgba(255,255,255,.65)}
 .home-intro{background:#f5faf8;padding:48px 0}.intro-grid,.section-heading{display:flex;gap:40px;align-items:end;justify-content:space-between}.intro-grid h2,.section-heading h2,.home-split h2,.home-cta h2{font:700 clamp(2rem,3.8vw,3.35rem)/1.05 Manrope,Arial,sans-serif;letter-spacing:-.055em;margin:0;color:var(--ink)}.intro-grid p{max-width:660px;margin:14px 0 0;color:var(--muted)}.text-link{display:inline-flex;gap:8px;align-items:center;font-size:.84rem;font-weight:800;color:var(--teal);white-space:nowrap}.text-link span{font-size:1.2rem}.home-section{padding:105px 0}.section-heading{align-items:start}.section-heading>p{max-width:370px;color:var(--muted);margin:25px 0 0;font-size:.9rem}.pillars-section{background:#fff}.pillars-grid,.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}.pillar-card{padding:30px;border-radius:18px;background:#f5faf8;border:1px solid #e0ece8;transition:transform .25s,box-shadow .25s}.pillar-card:hover,.program-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.pillar-card span,.program-number{display:block;color:var(--teal);font:2rem 'DM Serif Display',serif}.pillar-card h3,.program-card h3{margin:17px 0 9px;font-size:1.1rem}.pillar-card p,.program-card p{margin:0;color:var(--muted);font-size:.84rem}.home-split{background:#f6f7f3}.home-image{min-height:430px;border-radius:24px;background:linear-gradient(rgba(4,58,60,.12),rgba(4,58,60,.42)),url('assets/images/foto-masjid.jpeg') center/cover;position:relative;overflow:hidden}.home-image-label{position:absolute;bottom:22px;left:22px;padding:13px 16px;border-radius:12px;background:rgba(255,255,255,.93);color:var(--ink);font-weight:800;font-size:.84rem}.home-image-label span{font-size:.7rem;color:var(--muted);font-weight:600}.home-split .lead{margin-bottom:26px}.programs-section{background:#fff}.program-card{padding:29px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:transform .25s,box-shadow .25s}.program-card a{display:inline-block;margin-top:19px;font-size:.79rem;font-weight:800;color:var(--teal)}.home-cta{margin:0 auto 105px;padding:56px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:35px}.home-cta .eyebrow{color:var(--mint)}.home-cta h2{color:#fff;max-width:720px}.home-cta p{color:rgba(255,255,255,.7);margin:16px 0 0;max-width:630px}.cta-actions{display:flex;gap:10px;flex-wrap:wrap}.light-outline{border-color:rgba(255,255,255,.45)!important;color:#fff!important}
 @media(max-width:800px){body:not(.page-top) .menu-button{color:var(--ink)}.hero-home{height:auto;min-height:690px}.hero-home .hero-content{padding-top:130px;padding-bottom:105px}.intro-grid,.section-heading,.home-cta{display:block}.intro-grid .text-link,.section-heading .text-link{margin-top:22px}.pillars-grid,.program-grid{grid-template-columns:1fr}.home-section{padding:70px 0}.home-cta{margin-bottom:70px;padding:35px}.cta-actions{margin-top:28px}.hero-home h1{font-size:3.45rem}}
+/* Styling Section Program Masjid */
+.program-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.program-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header Judul */
+.program-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.program-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0b2545;
+  margin-bottom: 8px;
+}
+
+.program-header p {
+  font-size: 16px;
+  color: #718096;
+}
+
+/* Filter Tombol */
+.program-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #08214d;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: #f97316; /* Warna oranye aktif */
+  color: #ffffff;
+}
+
+/* Grid Layout Card */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Card Styling */
+.program-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-category {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
