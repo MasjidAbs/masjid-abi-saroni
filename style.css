@@ -298,6 +298,9 @@ body:not(.page-top) .nav-links a:hover,body:not(.page-top) .nav-links a.active,b
   text-decoration: underline;
 }
 
+/* Navigation icons and a continuous hover area for dropdown links. */
+.nav-links>li>a,.nav-group-trigger{display:inline-flex;align-items:center;gap:6px}.nav-icon{width:14px;font-style:normal;font-size:.95rem;line-height:1;text-align:center}.nav-chevron{margin-left:0!important;font-size:.95rem!important}.nav-submenu{top:calc(100% - 2px)!important}
+
 /* Balance the header alignment and deepen the home-page palette. */
 body:not(.page-top) .navigation{width:min(1320px,94%)}
 .home-intro{background:#dcece6}.home-intro .eyebrow{color:#116861}
