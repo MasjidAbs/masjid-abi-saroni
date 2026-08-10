@@ -27,9 +27,9 @@
       .then((response) => { if (!response.ok) throw new Error('Jadwal tidak tersedia'); return response.json(); })
       .then((response) => {
         const schedule = response?.jadwal;
-        const times = [['Subuh', schedule?.subuh], ['Zuhur', schedule?.dzuhur], ['Asar', schedule?.ashar], ['Maghrib', schedule?.maghrib], ['Isya', schedule?.isya]];
+        const times = [['Subuh', schedule?.subuh, '&#9728;'], ['Zuhur', schedule?.dzuhur, '&#9788;'], ['Asar', schedule?.ashar, '&#9728;'], ['Maghrib', schedule?.maghrib, '&#9789;'], ['Isya', schedule?.isya, '&#9790;']];
         if (times.some(([, time]) => !time)) throw new Error('Format jadwal tidak tersedia');
-        prayerSchedule.innerHTML = times.map(([name, time]) => `<div class="prayer-time"><span>${name}</span><strong>${time}</strong></div>`).join('');
+        prayerSchedule.innerHTML = times.map(([name, time, icon]) => `<div class="prayer-time"><i class="prayer-icon">${icon}</i><span>${name}</span><strong>${time}</strong></div>`).join('');
         if (prayerDate) prayerDate.textContent = new Intl.DateTimeFormat('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(new Date());
       })
       .catch(() => { prayerSchedule.innerHTML = '<span>Jadwal belum dapat dimuat. Silakan cek sumber jadwal resmi.</span>'; });
