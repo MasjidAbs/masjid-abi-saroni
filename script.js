@@ -1,5 +1,12 @@
 ﻿(() => {
   const config = window.SITE_CONFIG;
+  if (!document.querySelector('link[rel~="icon"]')) {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/png';
+    favicon.href = config.assets.logo;
+    document.head.append(favicon);
+  }
   const currentPage = location.pathname.split('/').pop() || 'index.html';
   const navigation = document.querySelector('.nav-links');
   if (navigation) {
