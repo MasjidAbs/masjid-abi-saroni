@@ -12,3 +12,5 @@ footer{padding:55px 0 25px;background:var(--deep);color:#fff;margin-top:100px}.f
 /* Keep the hero fade behind its text and actions. */
 .hero-bottom{z-index:1;pointer-events:none}
 .hero-content,.hero-dots{z-index:3}
+.overview{margin-top:0}
+.floating-wa svg{width:26px;height:26px;fill:currentColor}
