@@ -15,6 +15,7 @@ window.SITE_CONFIG = {
   accountHolder: "[ATAS NAMA â€” isi nanti]",
   assets: {
     logo: "assets/images/logo-masjid.png",
+    favicon: "assets/images/favicon-masjid.png",
     hero: [
       "assets/images/foto-masjid.jpeg",
       "assets/images/foto-kegiatan-1.png",
