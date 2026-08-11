@@ -739,14 +739,22 @@ footer .brand-mark {
 }
 
 .site-header .brand-mark {
-    width: 50px;
-    height: 50px;
+    width: 96px;
+    height: 52px;
 }
 
-/* Menu berada rapat dan terarah ke sisi kanan pill. */
+.site-header .navigation {
+    justify-content: flex-start;
+}
+
+/* Komposisi desktop: logo di kiri, menu dalam satu garis setelahnya. */
+.site-header .brand > span:last-child {
+    display: none;
+}
+
 .site-header .nav-links {
-    margin-left: auto;
-    gap: 21px;
+    margin: 0 0 0 42px;
+    gap: 24px;
     font-size: 0.88rem;
 }
 
@@ -754,6 +762,10 @@ footer .brand-mark {
     .site-header .brand-mark {
         width: 44px;
         height: 44px;
+    }
+
+    .site-header .brand > span:last-child {
+        display: block;
     }
 
     .site-header .nav-links {
