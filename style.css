@@ -687,6 +687,25 @@ body.page-top .site-header:not(.scrolled) {
         box-shadow: 0 16px 36px rgba(2, 35, 32, 0.22);
     }
 }
+
+.hero-tagline {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hero-tagline-kicker {
+    color: #fff;
+    font: 600 clamp(1.25rem, 2vw, 1.8rem)/1.1 Manrope, Arial, sans-serif;
+    letter-spacing: -0.03em;
+}
+
+.hero-tagline-main {
+    color: var(--mint);
+    font: 700 clamp(2rem, 3.4vw, 3.15rem)/1.05 'DM Serif Display', serif;
+    letter-spacing: -0.04em;
+}
+
 /* NAVBAR TYPOGRAPHY POLISH */
 .navigation .nav-links > li > a,
 .navigation .nav-group-trigger {
@@ -772,5 +791,45 @@ footer .brand-mark {
         margin-left: 0;
         gap: 0;
         font-size: inherit;
+    }
+}
+
+/* Final homepage alignment overrides. */
+@media (min-width: 801px) {
+    .site-header .navigation {
+        justify-content: center;
+    }
+
+    .site-header .brand {
+        position: absolute;
+        left: 24px;
+    }
+
+    .site-header .brand-mark {
+        width: 116px;
+        height: 62px;
+    }
+
+    .site-header .nav-links {
+        margin-left: 0;
+    }
+
+    .hero-home .hero-content {
+        width: min(680px, 90%);
+        margin-left: max(5vw, calc((100vw - 1140px) / 2));
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .site-header .brand-mark {
+        width: 54px;
+        height: 54px;
+    }
+
+    .hero-home .hero-content {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
