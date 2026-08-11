@@ -118,3 +118,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Berita di Home: hanya artikel yang sudah dipublikasikan di Supabase.
+(() => {
+  const list = document.querySelector('[data-news-list]');
+  if (!list) return;
+  const status = document.querySelector('[data-news-status]');
+  const supabase = window.SITE_CONFIG?.supabase;
+  const fallbackImage = 'assets/images/foto-kegiatan-1.png';
+  const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }[character]));
+  const formatDate = (value) => {
+    const date = new Date(value);
+    return !value || Number.isNaN(date.getTime()) ? 'Kabar Masjid' : new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+  };
+  if (!supabase?.url || !supabase?.publishableKey) {
+    list.innerHTML = '<p class="news-empty">Berita akan segera hadir.</p>';
+    return;
+  }
+  fetch(`${supabase.url}/rest/v1/articles?select=id,title,slug,excerpt,image_url,created_at&published=eq.true&order=created_at.desc&limit=3`, {
+    headers: { apikey: supabase.publishableKey, Authorization: `Bearer ${supabase.publishableKey}` }
+  })
+    .then((response) => { if (!response.ok) throw new Error(`Supabase HTTP ${response.status}`); return response.json(); })
+    .then((articles) => {
+      if (!articles.length) {
+        list.innerHTML = '<p class="news-empty">Belum ada berita yang dipublikasikan. Nantikan kabar terbaru dari Masjid Jami\' Abi Sa\'roni.</p>';
+        if (status) status.textContent = 'Belum ada berita';
+        return;
+      }
+      list.innerHTML = articles.map((article) => {
+        const title = escapeHtml(article.title || 'Kabar dari Masjid Jami\' Abi Sa\'roni');
+        const excerpt = escapeHtml(article.excerpt || 'Informasi terbaru untuk jamaah dan masyarakat.');
+        const image = escapeHtml(article.image_url || fallbackImage);
+        return `<article class="news-card"><img src="${image}" alt="" loading="lazy" onerror="this.src='${fallbackImage}'"><div class="news-card-body"><p class="news-date">${formatDate(article.created_at)}</p><h3>${title}</h3><p>${excerpt}</p><span class="news-read">Berita terbaru &rarr;</span></div></article>`;
+      }).join('');
+      if (status) status.textContent = `${articles.length} berita terbaru`;
+    })
+    .catch(() => {
+      list.innerHTML = '<p class="news-empty">Berita belum dapat dimuat. Silakan coba lagi beberapa saat lagi.</p>';
+      if (status) status.textContent = 'Berita belum tersedia';
+    });
+})();

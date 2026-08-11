@@ -20,5 +20,9 @@ window.SITE_CONFIG = {
       "assets/images/foto-kegiatan-1.png",
       "assets/images/foto-kegiatan-2.jpg"
     ]
+  },
+  supabase: {
+    url: "https://drrsyiejtponnimpytvb.supabase.co",
+    publishableKey: "sb_publishable_BWFt5kxdHHkqc7iocyv2TQ_qnefiJsT"
   }
 };
