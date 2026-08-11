@@ -806,8 +806,8 @@ footer .brand-mark {
     }
 
     .site-header .brand-mark {
-        width: 116px;
-        height: 62px;
+        width: 104px;
+        height: 56px;
     }
 
     .site-header .nav-links {
@@ -818,6 +818,7 @@ footer .brand-mark {
         width: min(680px, 90%);
         margin-left: max(5vw, calc((100vw - 1140px) / 2));
         margin-right: auto;
+        text-align: left;
     }
 }
 
