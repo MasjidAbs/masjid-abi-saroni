@@ -564,5 +564,73 @@ body.page-top .site-header:not(.scrolled) {
 }
 
 /* Home: berita Supabase */
-.v2-heading-copy{max-width:600px;margin:12px 0 0;color:var(--muted);font-size:.9rem}.news-live{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:var(--teal);font-size:.7rem;font-weight:800;white-space:nowrap}.news-live:before{content:'';width:7px;height:7px;border-radius:50%;background:#22a886;box-shadow:0 0 0 4px rgba(34,168,134,.12)}.v2-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.news-card{overflow:hidden;border:1px solid rgba(6,47,49,.09);border-radius:24px;background:#fff;box-shadow:0 8px 22px rgba(5,43,44,.04);transition:transform .25s ease,box-shadow .25s ease}.news-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.news-card>img{width:100%;height:215px;object-fit:cover;background:#dcece6}.news-card-body{padding:23px 23px 25px}.news-date{margin:0;color:var(--teal);font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.news-card h3{margin:11px 0 9px;font:1.55rem/1.12 'DM Serif Display',serif;letter-spacing:-.025em}.news-card-body>p:not(.news-date){display:-webkit-box;overflow:hidden;margin:0;color:var(--muted);font-size:.79rem;line-height:1.7;-webkit-box-orient:vertical;-webkit-line-clamp:3}.news-read{display:inline-block;margin-top:20px;color:var(--ink);font-size:.74rem;font-weight:800}.news-empty,.news-loading{grid-column:1/-1;margin:0;padding:38px;border:1px dashed rgba(18,109,104,.3);border-radius:22px;color:var(--muted);text-align:center;background:rgba(255,255,255,.45)}
+.v2-heading-copy{max-width:600px;margin:12px 0 0;color:var(--muted);font-size:.9rem}.news-live{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:var(--teal);font-size:.7rem;font-weight:800;white-space:nowrap}.news-live:before{content:'';width:7px;height:7px;border-radius:50%;background:#22a886;box-shadow:0 0 0 4px rgba(34,168,134,.12)}.v2-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.news-card{overflow:hidden;border:1px solid rgba(6,47,49,.09);border-radius:24px;background:#fff;box-shadow:0 8px 22px rgba(5,43,44,.04);transition:transform .25s ease,box-shadow .25s ease}.news-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.news-card>img{width:100%;height:215px;object-fit:cover;background:#dcece6}.news-card-body{padding:23px 23px 25px}.news-date{margin:0;color:var(--teal);font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.news-card h3{margin:11px 0 9px;font:1.55rem/1.12 'DM Serif Display',serif;letter-spacing:-.025em}.news-card-body>p:not(.news-date){display:-webkit-box;overflow:hidden;margin:0;color:var(--muted);font-size:.79rem;line-height:1.7;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3}.news-read{display:inline-block;margin-top:20px;color:var(--ink);font-size:.74rem;font-weight:800}.news-empty,.news-loading{grid-column:1/-1;margin:0;padding:38px;border:1px dashed rgba(18,109,104,.3);border-radius:22px;color:var(--muted);text-align:center;background:rgba(255,255,255,.45)}
 @media(max-width:800px){.v2-news-grid{grid-template-columns:1fr 1fr}.news-live{margin-top:20px}}@media(max-width:500px){.v2-news-grid{grid-template-columns:1fr}.news-card>img{height:225px}}
+
+
+/* HERO CAROUSEL POLISH */
+
+.hero-carousel {
+    overflow: hidden;
+}
+
+.hero-slide {
+    transform: scale(1.02);
+    opacity: 0;
+    transition:
+        opacity 1.2s ease,
+        transform 7s ease;
+    will-change: opacity, transform;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.hero-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(3, 43, 44, 0.78) 0%,
+        rgba(3, 43, 44, 0.48) 42%,
+        rgba(3, 43, 44, 0.18) 100%
+    );
+    pointer-events: none;
+}
+
+.hero-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-dots button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition:
+        width 0.35s ease,
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+.hero-dots button.active {
+    width: 28px;
+    background: #a8e3d7;
+}
+
+.hero-dots button:hover {
+    transform: scale(1.15);
+}
