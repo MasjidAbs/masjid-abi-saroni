@@ -196,6 +196,103 @@ const loadPrayerTimes = async () => {
     }
 };
 
+// =========================================
+// PRAYER TIMES
+// =========================================
+
+const loadPrayerTimes = async () => {
+    try {
+        const response = await fetch('/api/prayer-times');
+
+        if (!response.ok) {
+            throw new Error('Gagal mengambil jadwal salat');
+        }
+
+        const result = await response.json();
+        const schedule = result?.schedule;
+
+        if (!schedule) {
+            throw new Error('Data jadwal salat tidak ditemukan');
+        }
+
+        const prayerTimes = {
+            subuh: schedule.subuh,
+            dzuhur: schedule.dzuhur,
+            ashar: schedule.ashar,
+            maghrib: schedule.maghrib,
+            isya: schedule.isya
+        };
+
+        // Tampilkan waktu ke HTML
+        Object.entries(prayerTimes).forEach(([name, time]) => {
+            const element = document.getElementById(`prayer-${name}`);
+
+            if (element && time) {
+                element.textContent = time;
+            }
+        });
+
+        // =========================================
+        // DETEKSI WAKTU SALAT BERIKUTNYA
+        // =========================================
+
+        const now = new Date();
+        const currentMinutes =
+            now.getHours() * 60 + now.getMinutes();
+
+        let nextPrayer = null;
+
+        for (const [name, time] of Object.entries(prayerTimes)) {
+            if (!time) continue;
+
+            const cleanTime = String(time).replace('.', ':');
+            const [hours, minutes] = cleanTime.split(':').map(Number);
+
+            const prayerMinutes = hours * 60 + minutes;
+
+            if (prayerMinutes > currentMinutes) {
+                nextPrayer = name;
+                break;
+            }
+        }
+
+        // Kalau semua waktu hari ini sudah lewat,
+        // maka Subuh menjadi waktu berikutnya
+        if (!nextPrayer) {
+            nextPrayer = 'subuh';
+        }
+
+        // Hapus status aktif sebelumnya
+        document.querySelectorAll('.prayer-item').forEach(item => {
+            item.classList.remove('is-next');
+
+            const badge = item.querySelector('.next-prayer-badge');
+            if (badge) badge.remove();
+        });
+
+        // Aktifkan waktu salat berikutnya
+        const nextElement =
+            document.getElementById(`prayer-${nextPrayer}`);
+
+        if (nextElement) {
+            const prayerItem = nextElement.closest('.prayer-item');
+
+            if (prayerItem) {
+                prayerItem.classList.add('is-next');
+
+                const badge = document.createElement('span');
+                badge.className = 'next-prayer-badge';
+                badge.textContent = 'BERIKUTNYA';
+
+                prayerItem.appendChild(badge);
+            }
+        }
+
+    } catch (error) {
+        console.error('Prayer times error:', error);
+    }
+};
+
 loadPrayerTimes();
 
 })();

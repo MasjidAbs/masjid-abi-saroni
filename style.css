@@ -935,3 +935,47 @@ footer .brand-mark {
 .prayer-bar .prayer-item:hover strong {
     color: #062f2f;
 }
+/* =========================================
+   NEXT PRAYER
+   ========================================= */
+
+.prayer-bar .prayer-item.is-next {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-6px);
+    box-shadow:
+        0 12px 28px rgba(73, 51, 10, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.prayer-bar .prayer-item.is-next strong {
+    font-size: 1.8rem;
+}
+
+.next-prayer-badge {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    background: #073a3a;
+    color: #d8b45a;
+
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    opacity: 0;
+    transform: translateY(-4px);
+
+    animation: prayerBadgeIn 0.4s ease forwards;
+}
+
+@keyframes prayerBadgeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
