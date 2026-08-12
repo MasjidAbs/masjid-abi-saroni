@@ -156,7 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
       list.innerHTML = '<p class="news-empty">Berita belum dapat dimuat. Silakan coba lagi beberapa saat lagi.</p>';
       if (status) status.textContent = 'Berita belum tersedia';
     });
-    // =========================================
+    
+// =========================================
 // PRAYER TIMES
 // =========================================
 
