@@ -192,66 +192,114 @@ const loadPrayerTimes = async () => {
             }
         });
 // =========================================
-// DETEKSI WAKTU SALAT BERIKUTNYA
+// LIVE NEXT PRAYER
 // =========================================
 
-const now = new Date();
+const updateNextPrayer = () => {
 
-const currentMinutes =
-    now.getHours() * 60 + now.getMinutes();
+    const now = new Date();
 
-let nextPrayer = null;
+    const currentMinutes =
+        now.getHours() * 60 + now.getMinutes();
 
-for (const [name, time] of Object.entries(prayerTimes)) {
-    if (!time) continue;
+    let nextPrayer = null;
+    let nextPrayerMinutes = null;
 
-    const cleanTime = String(time).replace('.', ':');
-    const [hours, minutes] = cleanTime.split(':').map(Number);
+    for (const [name, time] of Object.entries(prayerTimes)) {
 
-    const prayerMinutes = hours * 60 + minutes;
+        if (!time) continue;
 
-    if (prayerMinutes > currentMinutes) {
-        nextPrayer = name;
-        break;
+        const cleanTime =
+            String(time).replace('.', ':');
+
+        const [hours, minutes] =
+            cleanTime.split(':').map(Number);
+
+        const prayerMinutes =
+            hours * 60 + minutes;
+
+        if (prayerMinutes > currentMinutes) {
+
+            nextPrayer = name;
+            nextPrayerMinutes = prayerMinutes;
+
+            break;
+        }
     }
-}
 
-// Kalau semua waktu hari ini sudah lewat,
-// maka Subuh menjadi waktu berikutnya
-if (!nextPrayer) {
-    nextPrayer = 'subuh';
-}
+    // Kalau semua waktu hari ini sudah lewat,
+    // maka Subuh besok menjadi waktu berikutnya.
+    if (!nextPrayer) {
 
-// Bersihkan status sebelumnya
-document.querySelectorAll('.prayer-item').forEach(item => {
-    item.classList.remove('is-next');
+        nextPrayer = 'subuh';
 
-    const badge = item.querySelector('.next-prayer-badge');
+        const cleanTime =
+            String(prayerTimes.subuh).replace('.', ':');
 
-    if (badge) {
-        badge.remove();
+        const [hours, minutes] =
+            cleanTime.split(':').map(Number);
+
+        nextPrayerMinutes =
+            (hours * 60 + minutes) + (24 * 60);
     }
-});
 
-// Tandai waktu berikutnya
-const nextElement =
-    document.getElementById(`prayer-${nextPrayer}`);
+    // Bersihkan status sebelumnya
+    document
+        .querySelectorAll('.prayer-item')
+        .forEach(item => {
 
-if (nextElement) {
-    const prayerItem =
-        nextElement.closest('.prayer-item');
+            item.classList.remove('is-next');
 
-    if (prayerItem) {
-        prayerItem.classList.add('is-next');
+            const badge =
+                item.querySelector('.next-prayer-badge');
 
-        const badge = document.createElement('span');
+            if (badge) {
+                badge.remove();
+            }
+        });
 
-        badge.className = 'next-prayer-badge';
-        badge.textContent = 'BERIKUTNYA';
+    // Tandai waktu berikutnya
+    const nextElement =
+        document.getElementById(
+            `prayer-${nextPrayer}`
+        );
 
-        prayerItem.appendChild(badge);
+    if (nextElement) {
+
+        const prayerItem =
+            nextElement.closest('.prayer-item');
+
+        if (prayerItem) {
+
+            prayerItem.classList.add('is-next');
+
+            const badge =
+                document.createElement('span');
+
+            badge.className =
+                'next-prayer-badge';
+
+            badge.textContent =
+                'BERIKUTNYA';
+
+            const nameElement =
+                prayerItem.querySelector('.prayer-name');
+
+            if (nameElement) {
+                nameElement.appendChild(badge);
+            } else {
+                prayerItem.prepend(badge);
+            }
+        }
     }
-}
+};
+
+// Jalankan pertama kali
+updateNextPrayer();
+
+// Periksa setiap menit
+setInterval(updateNextPrayer, 60000);
+
     } catch (error) {
         console.error('Prayer times error:', error);
     }
