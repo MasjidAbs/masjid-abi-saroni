@@ -256,6 +256,7 @@ if (nextElement) {
         console.error('Prayer times error:', error);
     }
 };
+
 loadPrayerTimes();
 
 })();
