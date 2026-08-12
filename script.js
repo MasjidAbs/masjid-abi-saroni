@@ -300,6 +300,112 @@ updateNextPrayer();
 // Periksa setiap menit
 setInterval(updateNextPrayer, 60000);
 
+// =========================================
+// COUNTDOWN WAKTU SALAT BERIKUTNYA
+// =========================================
+
+const updatePrayerCountdown = () => {
+    const countdown =
+        document.getElementById('prayer-countdown');
+
+    if (!countdown) return;
+
+    const now = new Date();
+
+    const currentMinutes =
+        now.getHours() * 60 + now.getMinutes();
+
+    let nextPrayer = null;
+    let nextPrayerTime = null;
+
+    // Cari waktu salat berikutnya
+    for (const [name, time] of Object.entries(prayerTimes)) {
+        if (!time) continue;
+
+        const cleanTime =
+            String(time).replace('.', ':');
+
+        const [hours, minutes] =
+            cleanTime.split(':').map(Number);
+
+        const prayerMinutes =
+            hours * 60 + minutes;
+
+        if (prayerMinutes > currentMinutes) {
+            nextPrayer = name;
+            nextPrayerTime = new Date(now);
+
+            nextPrayerTime.setHours(
+                hours,
+                minutes,
+                0,
+                0
+            );
+
+            break;
+        }
+    }
+
+    // Kalau semua waktu hari ini sudah lewat,
+    // maka Subuh besok menjadi waktu berikutnya.
+    if (!nextPrayer) {
+        nextPrayer = 'subuh';
+
+        const cleanTime =
+            String(prayerTimes.subuh).replace('.', ':');
+
+        const [hours, minutes] =
+            cleanTime.split(':').map(Number);
+
+        nextPrayerTime = new Date(now);
+
+        nextPrayerTime.setDate(
+            nextPrayerTime.getDate() + 1
+        );
+
+        nextPrayerTime.setHours(
+            hours,
+            minutes,
+            0,
+            0
+        );
+    }
+
+    // Hitung selisih waktu
+    const difference =
+        nextPrayerTime.getTime() - now.getTime();
+
+    const totalSeconds =
+        Math.max(0, Math.floor(difference / 1000));
+
+    const hours =
+        Math.floor(totalSeconds / 3600);
+
+    const minutes =
+        Math.floor((totalSeconds % 3600) / 60);
+
+    const seconds =
+        totalSeconds % 60;
+
+    const format =
+        number => String(number).padStart(2, '0');
+
+    const prayerLabel =
+        nextPrayer.charAt(0).toUpperCase() +
+        nextPrayer.slice(1);
+
+    countdown.innerHTML =
+        `Menuju <strong>${prayerLabel}</strong> · ` +
+        `<strong>${format(hours)}:${format(minutes)}:${format(seconds)}</strong>`;
+};
+
+// Jalankan pertama kali
+updatePrayerCountdown();
+
+// Update setiap detik
+setInterval(updatePrayerCountdown, 1000);
+
+
     } catch (error) {
         console.error('Prayer times error:', error);
     }
