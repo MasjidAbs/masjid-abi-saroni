@@ -1000,3 +1000,54 @@ footer .brand-mark {
         transform: translateY(0);
     }
 }
+/* =========================================
+   PRAYER COUNTDOWN
+   ========================================= */
+
+.prayer-countdown {
+    width: fit-content;
+    margin: 18px auto 0;
+
+    color: var(--ink);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+
+    text-align: center;
+
+    opacity: 0.82;
+}
+
+.prayer-countdown::before {
+    content: "";
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #c89b3c;
+
+    vertical-align: middle;
+
+    box-shadow:
+        0 0 0 4px rgba(200, 155, 60, 0.10);
+}
+
+.prayer-countdown strong {
+    color: #b8892e;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 600px) {
+    .prayer-countdown {
+        font-size: 0.7rem;
+        margin-top: 14px;
+    }
+}
