@@ -834,3 +834,76 @@ footer .brand-mark {
         margin-left: auto;
     }
 }
+/* Prayer Times Bar */
+.prayer-bar .v2-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.prayer-bar .prayer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    min-height: 90px;
+}
+
+.prayer-bar .prayer-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.prayer-bar .prayer-item strong {
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+/* =========================================
+   PRAYER TIMES — GOLD ELEGANT
+   ========================================= */
+
+.prayer-bar .prayer-item {
+    position: relative;
+    padding: 18px 24px;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+    border-radius: 16px;
+}
+
+/* Nama waktu salat */
+.prayer-bar .prayer-name {
+    color: #a87919;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Jam salat */
+.prayer-bar .prayer-item strong {
+    color: #073a3a;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+/* Efek ketika cursor diarahkan */
+.prayer-bar .prayer-item:hover {
+    transform: translateY(-6px);
+    background: rgba(201, 157, 55, 0.08);
+    box-shadow: 0 12px 28px rgba(168, 121, 25, 0.14);
+}
+
+/* Gold menjadi lebih hidup saat hover */
+.prayer-bar .prayer-item:hover .prayer-name {
+    color: #c49a3a;
+}
+
+.prayer-bar .prayer-item:hover strong {
+    color: #a87919;
+}

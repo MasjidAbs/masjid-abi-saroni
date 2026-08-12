@@ -156,4 +156,46 @@ document.addEventListener('DOMContentLoaded', () => {
       list.innerHTML = '<p class="news-empty">Berita belum dapat dimuat. Silakan coba lagi beberapa saat lagi.</p>';
       if (status) status.textContent = 'Berita belum tersedia';
     });
+    // =========================================
+// PRAYER TIMES
+// =========================================
+
+const loadPrayerTimes = async () => {
+    try {
+        const response = await fetch('/api/prayer-times');
+
+        if (!response.ok) {
+            throw new Error('Gagal mengambil jadwal salat');
+        }
+
+        const result = await response.json();
+        const schedule = result?.schedule;
+
+        if (!schedule) {
+            throw new Error('Data jadwal salat tidak ditemukan');
+        }
+
+        const prayerTimes = {
+            subuh: schedule.subuh,
+            dzuhur: schedule.dzuhur,
+            ashar: schedule.ashar,
+            maghrib: schedule.maghrib,
+            isya: schedule.isya
+        };
+
+        Object.entries(prayerTimes).forEach(([name, time]) => {
+            const element = document.getElementById(`prayer-${name}`);
+
+            if (element && time) {
+                element.textContent = time;
+            }
+        });
+
+    } catch (error) {
+        console.error('Prayer times error:', error);
+    }
+};
+
+loadPrayerTimes();
+
 })();
