@@ -860,50 +860,78 @@ footer .brand-mark {
     font-weight: 700;
 }
 /* =========================================
-   PRAYER TIMES — GOLD ELEGANT
+   PRAYER TIMES — ELEGANT GOLD BAR
    ========================================= */
 
+.prayer-bar {
+    position: relative;
+    overflow: visible;
+}
+
+.prayer-bar .v2-stats {
+    background: linear-gradient(
+        135deg,
+        #b8892e 0%,
+        #d2ad55 45%,
+        #b8892e 100%
+    );
+    border-radius: 28px;
+    box-shadow:
+        0 18px 40px rgba(137, 101, 32, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    padding: 10px;
+}
+
+/* Setiap waktu salat */
 .prayer-bar .prayer-item {
     position: relative;
+    min-height: 105px;
     padding: 18px 24px;
+    border-radius: 20px;
     transition:
         transform 0.3s ease,
         background 0.3s ease,
         box-shadow 0.3s ease;
-    border-radius: 16px;
 }
 
-/* Nama waktu salat */
+/* Garis pemisah */
+.prayer-bar .prayer-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 18%;
+    right: 0;
+    width: 1px;
+    height: 64%;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Nama salat */
 .prayer-bar .prayer-name {
-    color: #a87919;
+    color: #073a3a;
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    transition: color 0.3s ease;
 }
 
-/* Jam salat */
+/* Jam */
 .prayer-bar .prayer-item strong {
     color: #073a3a;
     font-size: 1.7rem;
     font-weight: 800;
     letter-spacing: 0.02em;
-    transition: color 0.3s ease;
 }
 
-/* Efek ketika cursor diarahkan */
+/* Hover */
 .prayer-bar .prayer-item:hover {
     transform: translateY(-6px);
-    background: rgba(201, 157, 55, 0.08);
-    box-shadow: 0 12px 28px rgba(168, 121, 25, 0.14);
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow:
+        0 10px 25px rgba(73, 51, 10, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
-/* Gold menjadi lebih hidup saat hover */
-.prayer-bar .prayer-item:hover .prayer-name {
-    color: #c49a3a;
-}
-
+.prayer-bar .prayer-item:hover .prayer-name,
 .prayer-bar .prayer-item:hover strong {
-    color: #a87919;
+    color: #062f2f;
 }
