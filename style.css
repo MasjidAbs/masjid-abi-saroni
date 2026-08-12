@@ -1994,3 +1994,63 @@ footer .brand-mark {
         font-size: .82rem;
     }
 }
+/* =========================================================
+   PRAYER HEADING & CARD POLISH
+   ========================================================= */
+
+/* Heading satu baris di desktop */
+.prayer-heading {
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+.prayer-heading h2 {
+    white-space: nowrap;
+}
+
+
+/* Hilangkan divider lama dari pseudo-element */
+.v2-statbar.prayer-bar .prayer-name::after {
+    display: none !important;
+}
+
+
+/* Gunakan hanya divider yang kita buat */
+.v2-statbar.prayer-bar .prayer-divider {
+    display: block;
+
+    width: 30px;
+    height: 3px;
+
+    margin: 12px 0 14px;
+
+    border-radius: 999px;
+
+    background: #fff;
+}
+
+
+/* Sedikit rapikan posisi heading */
+.prayer-heading {
+    margin-bottom: 38px;
+}
+
+
+/* =========================================================
+   MOBILE — heading boleh turun baris
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .prayer-heading h2 {
+        white-space: normal;
+    }
+
+    .prayer-heading {
+        gap: 12px;
+    }
+
+    .prayer-heading-line {
+        width: 25px;
+    }
+}
