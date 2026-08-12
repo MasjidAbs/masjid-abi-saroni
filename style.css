@@ -1485,4 +1485,75 @@ footer .brand-mark {
     .prayer-countdown strong:last-of-type {
         font-size: 1.08em;
     }
+}/* =========================================
+   PRAYER CARD — COMPACT VERSION
+   ========================================= */
+
+.v2-statbar.prayer-bar .v2-stats {
+    width: min(1100px, 90%);
+    gap: 12px;
+}
+
+.v2-statbar.prayer-bar .prayer-item {
+    min-height: 150px;
+    padding: 18px 14px;
+
+    border-radius: 22px;
+}
+
+.v2-statbar.prayer-bar .prayer-icon {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 10px;
+
+    font-size: 2.1rem;
+}
+
+.v2-statbar.prayer-bar .prayer-name {
+    margin-bottom: 8px;
+
+    font-size: .78rem;
+    letter-spacing: .10em;
+}
+
+.v2-statbar.prayer-bar .prayer-name::after {
+    width: 26px;
+    height: 2px;
+
+    margin-top: 7px;
+}
+
+.v2-statbar.prayer-bar .prayer-item b {
+    font-size: 1.85rem;
+}
+
+.v2-statbar.prayer-bar .prayer-item.is-next {
+    transform: translateY(-6px);
+}
+
+.v2-statbar.prayer-bar .next-prayer-badge {
+    top: 10px;
+    right: 10px;
+
+    padding: 5px 8px;
+
+    font-size: .52rem;
+}
+
+.prayer-countdown {
+    width: min(650px, 82%);
+
+    margin: 22px auto 0;
+    padding: 13px 22px;
+
+    font-size: .95rem;
+}
+
+.prayer-countdown strong:first-of-type {
+    font-size: 1.1em;
+}
+
+.prayer-countdown strong:last-of-type {
+    font-size: 1.12em;
 }
