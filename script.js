@@ -185,12 +185,17 @@ const loadPrayerTimes = async () => {
         };
 
         Object.entries(prayerTimes).forEach(([name, time]) => {
-            const element = document.getElementById(`prayer-${name}`);
+    const element = document.getElementById(`prayer-${name}`);
 
-            if (element && time) {
-                element.textContent = time;
-            }
-        });
+    if (element && time) {
+        const timeElement = element.querySelector('b');
+
+        if (timeElement) {
+            timeElement.textContent = time;
+        }
+    }
+});
+    
 // =========================================
 // LIVE NEXT PRAYER
 // =========================================
