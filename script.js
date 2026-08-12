@@ -191,15 +191,71 @@ const loadPrayerTimes = async () => {
                 element.textContent = time;
             }
         });
+// =========================================
+// DETEKSI WAKTU SALAT BERIKUTNYA
+// =========================================
 
+const now = new Date();
+
+const currentMinutes =
+    now.getHours() * 60 + now.getMinutes();
+
+let nextPrayer = null;
+
+for (const [name, time] of Object.entries(prayerTimes)) {
+    if (!time) continue;
+
+    const cleanTime = String(time).replace('.', ':');
+    const [hours, minutes] = cleanTime.split(':').map(Number);
+
+    const prayerMinutes = hours * 60 + minutes;
+
+    if (prayerMinutes > currentMinutes) {
+        nextPrayer = name;
+        break;
+    }
+}
+
+// Kalau semua waktu hari ini sudah lewat,
+// maka Subuh menjadi waktu berikutnya
+if (!nextPrayer) {
+    nextPrayer = 'subuh';
+}
+
+// Bersihkan status sebelumnya
+document.querySelectorAll('.prayer-item').forEach(item => {
+    item.classList.remove('is-next');
+
+    const badge = item.querySelector('.next-prayer-badge');
+
+    if (badge) {
+        badge.remove();
+    }
+});
+
+// Tandai waktu berikutnya
+const nextElement =
+    document.getElementById(`prayer-${nextPrayer}`);
+
+if (nextElement) {
+    const prayerItem =
+        nextElement.closest('.prayer-item');
+
+    if (prayerItem) {
+        prayerItem.classList.add('is-next');
+
+        const badge = document.createElement('span');
+
+        badge.className = 'next-prayer-badge';
+        badge.textContent = 'BERIKUTNYA';
+
+        prayerItem.appendChild(badge);
+    }
+}
     } catch (error) {
         console.error('Prayer times error:', error);
     }
 };
-
-// =========================================
-// PRAYER TIMES
-// =========================================
-
+loadPrayerTimes();
 
 })();
