@@ -1557,3 +1557,440 @@ footer .brand-mark {
 .prayer-countdown strong:last-of-type {
     font-size: 1.12em;
 }
+/* =========================================================
+   PRAYER SECTION — FINAL DESIGN
+   ========================================================= */
+
+.v2-statbar.prayer-bar {
+    position: relative;
+    z-index: 5;
+
+    padding: 72px 0 58px;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.prayer-heading {
+    width: min(1100px, 90%);
+
+    margin: 0 auto 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    text-align: center;
+}
+
+.prayer-heading-line {
+    width: 65px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c89b3c
+    );
+}
+
+.prayer-heading-line:last-child {
+    background: linear-gradient(
+        90deg,
+        #c89b3c,
+        transparent
+    );
+}
+
+.prayer-heading h2 {
+    margin: 0;
+
+    color: #073f3d;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.8rem
+    );
+
+    font-weight: 800;
+
+    letter-spacing: -.025em;
+
+    line-height: 1.15;
+}
+
+.prayer-heading h2 span {
+    color: #c89b3c;
+}
+
+.prayer-heading-icon {
+    position: absolute;
+
+    margin-top: -62px;
+
+    color: #c89b3c;
+
+    font-size: 2.2rem;
+
+    opacity: .9;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.v2-statbar.prayer-bar .v2-stats {
+    width: min(1140px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+.v2-statbar.prayer-bar .prayer-item {
+    position: relative;
+
+    min-height: 235px;
+
+    padding: 25px 15px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4d98d 0%,
+            #dcb04f 50%,
+            #c4922c 100%
+        );
+
+    border: 1.5px solid
+        rgba(255,255,255,.8);
+
+    box-shadow:
+        0 18px 35px
+        rgba(96,70,20,.16);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.v2-statbar.prayer-bar .prayer-item:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 45px
+        rgba(96,70,20,.24);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    color: #073f3d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 2.8rem;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   NAMA
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-name {
+    color: #073f3d;
+
+    font-size: .82rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .13em;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-divider {
+    width: 30px;
+    height: 3px;
+
+    margin: 11px 0 14px;
+
+    border-radius: 99px;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   JAM
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-item b {
+    color: #073f3d;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: .025em;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+/* =========================================================
+   NEXT PRAYER
+   ========================================================= */
+
+.v2-statbar.prayer-bar
+.prayer-item.is-next {
+
+    transform: translateY(-8px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8dfa0 0%,
+            #e2bd68 52%,
+            #c79531 100%
+        );
+
+    border-color:
+        rgba(255,255,255,.95);
+
+    box-shadow:
+        0 25px 45px
+        rgba(96,70,20,.25);
+}
+
+
+.v2-statbar.prayer-bar
+.prayer-item.is-next:hover {
+
+    transform:
+        translateY(-13px);
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.v2-statbar.prayer-bar
+.next-prayer-badge {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: #073f3d;
+
+    color: #f1d487;
+
+    font-size: .58rem;
+
+    font-weight: 800;
+
+    letter-spacing: .06em;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.prayer-countdown {
+
+    width: min(650px, 85%);
+
+    margin: 30px auto 0;
+
+    padding: 15px 25px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1.5px solid #c89b3c;
+
+    border-radius: 999px;
+
+    background:
+        #fffdf7;
+
+    color: #37615e;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 28px
+        rgba(96,70,20,.09);
+}
+
+
+.prayer-countdown::before {
+
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    flex: 0 0 9px;
+
+    margin-right: 12px;
+
+    border-radius: 50%;
+
+    background: #c89b3c;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(200,155,60,.12);
+}
+
+
+.prayer-countdown strong {
+    margin-left: 6px;
+
+    color: #c08d27;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .v2-statbar.prayer-bar {
+        padding: 55px 0 45px;
+    }
+
+    .prayer-heading {
+        margin-bottom: 30px;
+    }
+
+    .prayer-heading-line {
+        width: 30px;
+    }
+
+    .v2-statbar.prayer-bar .v2-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .v2-statbar.prayer-bar .prayer-item {
+        min-height: 190px;
+    }
+
+    .v2-statbar.prayer-bar
+    .prayer-item.is-next {
+        transform: translateY(-5px);
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .prayer-heading h2 {
+        font-size: 1.55rem;
+    }
+
+    .prayer-heading-line {
+        display: none;
+    }
+
+    .v2-statbar.prayer-bar .v2-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .v2-statbar.prayer-bar .prayer-item {
+        min-height: 170px;
+
+        padding: 18px 10px;
+    }
+
+    .v2-statbar.prayer-bar
+    .prayer-icon {
+        font-size: 2.2rem;
+    }
+
+    .v2-statbar.prayer-bar
+    .prayer-item b {
+        font-size: 1.6rem;
+    }
+
+    .prayer-countdown {
+        font-size: .82rem;
+    }
+}
