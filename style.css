@@ -1055,3 +1055,434 @@ footer .brand-mark {
         margin-top: 14px;
     }
 }
+/* =========================================================
+   PRAYER TIMES — MODERN GOLD CARDS
+   ========================================================= */
+
+.v2-statbar.prayer-bar {
+    position: relative;
+    z-index: 5;
+
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.v2-statbar.prayer-bar .v2-stats {
+    width: min(1140px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-item {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 30px 22px 26px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f2d58a 0%,
+            #d8ad4d 48%,
+            #bd8c27 100%
+        );
+
+    border: 1px solid rgba(255,255,255,.72);
+
+    box-shadow:
+        0 18px 35px rgba(74, 53, 15, .18),
+        inset 0 1px 0 rgba(255,255,255,.45);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+
+/* Hover */
+
+.v2-statbar.prayer-bar .prayer-item:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 24px 45px rgba(74, 53, 15, .25),
+        inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 18px;
+
+    color: #073f3d;
+
+    font-size: 3rem;
+    line-height: 1;
+
+    font-family: Arial, sans-serif;
+
+    transition:
+        transform .35s ease,
+        color .35s ease;
+}
+
+.v2-statbar.prayer-bar .prayer-item:hover .prayer-icon {
+    transform: translateY(-4px) scale(1.08);
+}
+
+
+/* =========================================================
+   NAMA SALAT
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-name {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #073f3d;
+
+    font-size: .92rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   GARIS PEMISAH
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-name::after {
+    content: "";
+
+    display: block;
+
+    width: 34px;
+    height: 3px;
+
+    margin: 12px auto 0;
+
+    border-radius: 99px;
+
+    background: rgba(255,255,255,.9);
+}
+
+
+/* =========================================================
+   JAM
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-item b {
+    display: block;
+
+    color: #073f3d;
+
+    font-size: 2.45rem;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: .035em;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   CARD WAKTU BERIKUTNYA
+   ========================================================= */
+
+.v2-statbar.prayer-bar .prayer-item.is-next {
+    transform: translateY(-10px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #f7dda0 0%,
+            #dfb95e 52%,
+            #c49332 100%
+        );
+
+    box-shadow:
+        0 28px 50px rgba(91, 65, 18, .27),
+        inset 0 1px 0 rgba(255,255,255,.65);
+
+    border-color: rgba(255,255,255,.95);
+}
+
+.v2-statbar.prayer-bar .prayer-item.is-next:hover {
+    transform: translateY(-14px);
+}
+
+
+/* =========================================================
+   BADGE BERIKUTNYA
+   ========================================================= */
+
+.v2-statbar.prayer-bar .next-prayer-badge {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    background: #073f3d;
+    color: #f4d78b;
+
+    font-size: .62rem;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 6px 15px rgba(7,63,61,.2);
+}
+
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.prayer-countdown {
+    width: min(760px, 88%);
+
+    margin: 30px auto 0;
+    padding: 17px 28px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1.5px solid #c99a36;
+
+    border-radius: 999px;
+
+    background: rgba(255, 251, 240, .96);
+
+    color: #073f3d;
+
+    font-size: 1.12rem;
+    font-weight: 600;
+
+    letter-spacing: .025em;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 30px rgba(89, 64, 20, .10);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.prayer-countdown:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 35px rgba(89, 64, 20, .15);
+}
+
+
+/* titik emas */
+
+.prayer-countdown::before {
+    content: "";
+
+    width: 10px;
+    height: 10px;
+
+    flex: 0 0 10px;
+
+    margin-right: 13px;
+
+    border-radius: 50%;
+
+    background: #c99a36;
+
+    box-shadow:
+        0 0 0 5px rgba(201,154,54,.12);
+}
+
+
+/* Nama waktu */
+
+.prayer-countdown strong:first-of-type {
+    margin: 0 7px;
+
+    color: #c08d27;
+
+    font-size: 1.22em;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+/* Angka countdown */
+
+.prayer-countdown strong:last-of-type {
+    margin-left: 9px;
+
+    color: #073f3d;
+
+    font-size: 1.25em;
+    font-weight: 800;
+
+    letter-spacing: .07em;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .v2-statbar.prayer-bar .v2-stats {
+        gap: 10px;
+    }
+
+    .v2-statbar.prayer-bar .prayer-item {
+        min-height: 210px;
+
+        padding:
+            25px 12px
+            22px;
+    }
+
+    .v2-statbar.prayer-bar .prayer-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 2.4rem;
+    }
+
+    .v2-statbar.prayer-bar .prayer-name {
+        font-size: .76rem;
+    }
+
+    .v2-statbar.prayer-bar .prayer-item b {
+        font-size: 1.8rem;
+    }
+
+    .v2-statbar.prayer-bar .next-prayer-badge {
+        top: 10px;
+        right: 8px;
+
+        font-size: .52rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .v2-statbar.prayer-bar .v2-stats {
+        width: 92%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .v2-statbar.prayer-bar .prayer-item {
+        min-height: 190px;
+
+        padding: 22px 12px;
+    }
+
+    .v2-statbar.prayer-bar .prayer-item.is-next {
+        transform: translateY(-5px);
+    }
+
+    .v2-statbar.prayer-bar .prayer-icon {
+        width: 44px;
+        height: 44px;
+
+        margin-bottom: 12px;
+
+        font-size: 2.1rem;
+    }
+
+    .v2-statbar.prayer-bar .prayer-name {
+        font-size: .72rem;
+        letter-spacing: .08em;
+    }
+
+    .v2-statbar.prayer-bar .prayer-item b {
+        font-size: 1.65rem;
+    }
+
+    .v2-statbar.prayer-bar .next-prayer-badge {
+        position: static;
+
+        margin-bottom: 10px;
+
+        order: -1;
+    }
+
+    .prayer-countdown {
+        width: 92%;
+
+        padding: 15px 14px;
+
+        font-size: .92rem;
+    }
+
+    .prayer-countdown strong:first-of-type {
+        font-size: 1.08em;
+    }
+
+    .prayer-countdown strong:last-of-type {
+        font-size: 1.08em;
+    }
+}
