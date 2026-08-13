@@ -3556,3 +3556,857 @@ footer .brand-mark {
 
     gap: 28px !important;
 }
+/* =====================================================
+   PROGRAM & KEGIATAN — ISTIQLAL INSPIRED
+===================================================== */
+
+.program-section {
+  background: #f8faf8;
+  padding: 110px 0 120px;
+}
+
+/* HEADING */
+
+.program-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.program-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #cda63a;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.program-eyebrow span {
+  width: 34px;
+  height: 1px;
+  background: #cda63a;
+}
+
+.program-heading h2 {
+  margin: 0;
+
+  color: #062f31;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.program-heading h2 em {
+  font-style: normal;
+  color: #cda63a;
+}
+
+.program-heading p {
+  max-width: 650px;
+  margin: 20px auto 0;
+
+  color: #718180;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* GRID */
+
+.program-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* CARD */
+
+.program-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 355px;
+
+  padding: 34px 34px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(6, 47, 49, 0.08);
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 8px 25px rgba(6, 47, 49, 0.035);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* HOVER CARD */
+
+.program-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(18, 109, 104, 0.55);
+
+  box-shadow:
+    0 22px 50px rgba(6, 47, 49, 0.10);
+}
+
+
+/* ICON */
+
+.program-icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: #fafafa;
+
+  color: #a47c18;
+
+  font-size: 21px;
+
+  border: 1px solid rgba(205, 166, 58, 0.06);
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.program-card:hover .program-icon {
+  background: #fff8e7;
+
+  color: #cda63a;
+
+  transform: scale(1.08);
+}
+
+
+/* TITLE */
+
+.program-card h3 {
+  margin: 0 0 10px;
+
+  color: #263b3b;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* DESCRIPTION */
+
+.program-card p {
+  margin: 0;
+
+  color: #718180;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* BUTTON */
+
+.program-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding: 13px 18px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    100deg,
+    #075b4d,
+    #10a878
+  );
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+
+  transition:
+    background 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.program-button i {
+  font-size: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.program-button:hover {
+  background: linear-gradient(
+    100deg,
+    #b58b2d,
+    #e0bb55
+  );
+
+  color: #062f31;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(205, 166, 58, 0.22);
+}
+
+.program-button:hover i {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .program-section {
+    padding: 80px 0 90px;
+  }
+
+  .program-heading {
+    margin-bottom: 35px;
+  }
+
+  .program-heading h2 {
+    font-size: 42px;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    min-height: 330px;
+
+    padding: 30px;
+  }
+
+}
+/* =====================================================
+   PROGRAM & KEGIATAN — ISTIQLAL INSPIRED
+===================================================== */
+
+.program-section {
+  background: #f8faf8;
+  padding: 110px 0 120px;
+}
+
+/* HEADING */
+
+.program-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.program-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #cda63a;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.program-eyebrow span {
+  width: 34px;
+  height: 1px;
+  background: #cda63a;
+}
+
+.program-heading h2 {
+  margin: 0;
+
+  color: #062f31;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.program-heading h2 em {
+  font-style: normal;
+  color: #cda63a;
+}
+
+.program-heading p {
+  max-width: 650px;
+  margin: 20px auto 0;
+
+  color: #718180;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* GRID */
+
+.program-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* CARD */
+
+.program-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 355px;
+
+  padding: 34px 34px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(6, 47, 49, 0.08);
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 8px 25px rgba(6, 47, 49, 0.035);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* HOVER CARD */
+
+.program-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(18, 109, 104, 0.55);
+
+  box-shadow:
+    0 22px 50px rgba(6, 47, 49, 0.10);
+}
+
+
+/* ICON */
+
+.program-icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: #fafafa;
+
+  color: #a47c18;
+
+  font-size: 21px;
+
+  border: 1px solid rgba(205, 166, 58, 0.06);
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.program-card:hover .program-icon {
+  background: #fff8e7;
+
+  color: #cda63a;
+
+  transform: scale(1.08);
+}
+
+
+/* TITLE */
+
+.program-card h3 {
+  margin: 0 0 10px;
+
+  color: #263b3b;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* DESCRIPTION */
+
+.program-card p {
+  margin: 0;
+
+  color: #718180;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* BUTTON */
+
+.program-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding: 13px 18px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    100deg,
+    #075b4d,
+    #10a878
+  );
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+
+  transition:
+    background 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.program-button i {
+  font-size: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.program-button:hover {
+  background: linear-gradient(
+    100deg,
+    #b58b2d,
+    #e0bb55
+  );
+
+  color: #062f31;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(205, 166, 58, 0.22);
+}
+
+.program-button:hover i {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .program-section {
+    padding: 80px 0 90px;
+  }
+
+  .program-heading {
+    margin-bottom: 35px;
+  }
+
+  .program-heading h2 {
+    font-size: 42px;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    min-height: 330px;
+
+    padding: 30px;
+  }
+
+}
+/* =========================================================
+   PROGRAM & KEGIATAN — FINAL CLEAN VERSION
+   ========================================================= */
+
+.program-section {
+    background: #f7f8f6;
+    padding: 95px 0 105px;
+}
+
+/* ---------- HEADING ---------- */
+
+.program-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.program-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: #b88a2b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.program-eyebrow span {
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: #c89b3c;
+}
+
+.program-heading h2 {
+    margin: 0;
+
+    color: #063b3b;
+
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(42px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -1px;
+}
+
+.program-heading h2 em {
+    color: #c99a36;
+    font-style: normal;
+}
+
+.program-heading p {
+    max-width: 650px;
+    margin: 17px auto 0;
+
+    color: #687878;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ---------- GRID ---------- */
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ---------- CARD ---------- */
+
+.program-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 325px;
+    padding: 30px 32px 27px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e7e3;
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(7, 52, 52, 0.045);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #b9cfc9;
+
+    box-shadow:
+        0 18px 38px rgba(7, 52, 52, 0.09);
+}
+
+
+/* ---------- ICON ---------- */
+
+.program-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    background: #f8f4e8;
+    border: 1px solid #eee5cf;
+
+    color: #b78a2d;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.program-card:hover .program-icon {
+    background: #073f3d;
+    border-color: #073f3d;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- TITLE ---------- */
+
+.program-card h3 {
+    margin: 0 0 10px;
+
+    color: #123d3d;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    letter-spacing: -0.25px;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.program-card p {
+    margin: 0;
+
+    color: #718080;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.program-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    margin-top: auto;
+    padding: 12px 18px;
+
+    border: 1px solid #0b6b60;
+    border-radius: 999px;
+
+    background: #0b6b60;
+
+    color: #ffffff !important;
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: 0.7px;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.program-button i {
+    color: inherit;
+    font-size: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.program-button:hover {
+    background: #c89b3c;
+    border-color: #c89b3c;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(200, 155, 60, 0.18);
+}
+
+.program-button:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   ICON FALLBACK
+   Kalau Font Awesome tidak muncul, tetap tampil simbol
+   ========================================================= */
+
+.program-icon i {
+    display: block;
+    color: #b78a2d;
+}
+
+.program-card:hover .program-icon i {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .program-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .program-section {
+        padding: 75px 0 80px;
+    }
+
+    .program-heading {
+        margin-bottom: 35px;
+    }
+
+    .program-heading h2 {
+        font-size: 40px;
+    }
+
+    .program-heading p {
+        font-size: 13px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .program-card {
+        min-height: 300px;
+        padding: 28px;
+    }
+
+}
