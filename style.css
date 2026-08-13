@@ -2922,215 +2922,50 @@ footer .brand-mark {
     font-style: normal;
 }
 /* =========================================================
-   HERO HEADING — FINAL OVERRIDE
-   ========================================================= */
-
-/* Hilangkan style hero lama */
-.hero-content .hero-badge {
-    display: none !important;
-}
-
-.hero-content .hero-tagline {
-    display: none !important;
-}
-
-
-/* BLOK HEADING */
-.hero-content .hero-heading {
-    position: relative;
-
-    max-width: 760px;
-
-    margin-top: -35px;
-    margin-bottom: 25px;
-
-    text-align: left;
-}
-
-
-/* EYEBROW */
-.hero-content .hero-eyebrow {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 24px;
-
-    color: #d3a63c !important;
-
-    font-family:
-        Manrope,
-        Arial,
-        sans-serif;
-
-    font-size: .78rem !important;
-    font-weight: 800 !important;
-
-    letter-spacing: .16em !important;
-
-    line-height: 1 !important;
-
-    text-transform: uppercase;
-}
-
-
-/* GARIS EMAS */
-.hero-content .hero-eyebrow-line {
-    display: block;
-
-    width: 28px;
-    height: 2px;
-
-    flex: 0 0 28px;
-
-    background: #d3a63c;
-}
-
-
-/* NAMA MASJID */
-.hero-content .hero-heading h1 {
-    margin: 0 !important;
-
-    color: #fff !important;
-
-    font-family:
-        "DM Serif Display",
-        Georgia,
-        serif !important;
-
-    font-size: clamp(
-        3.2rem,
-        5vw,
-        4.8rem
-    ) !important;
-
-    font-weight: 400 !important;
-
-    letter-spacing: -.045em !important;
-
-    line-height: .98 !important;
-
-    text-transform: none !important;
-}
-
-
-/* PERADABAN BESAR */
-.hero-content .hero-subtitle {
-    display: block;
-
-    margin: 22px 0 0 !important;
-
-    color: #fff !important;
-
-    font-family:
-        Manrope,
-        Arial,
-        sans-serif !important;
-
-    font-size: clamp(
-        1.35rem,
-        2vw,
-        1.8rem
-    ) !important;
-
-    font-weight: 800 !important;
-
-    letter-spacing: -.02em !important;
-
-    line-height: 1.1 !important;
-
-    text-transform: none !important;
-}
-
-
-/* MULAI DARI MASJID */
-.hero-content .hero-main-title {
-    display: block;
-
-    margin: 3px 0 0 !important;
-
-    color: #d3a63c !important;
-
-    font-family:
-        "DM Serif Display",
-        Georgia,
-        serif !important;
-
-    font-size: clamp(
-        2.25rem,
-        3.8vw,
-        3.5rem
-    ) !important;
-
-    font-weight: 400 !important;
-
-    letter-spacing: -.035em !important;
-
-    line-height: 1.05 !important;
-
-    text-transform: none !important;
-}
-
-
-/* PARAGRAF HERO */
-.hero-content .hero-copy {
-    max-width: 600px;
-
-    margin-top: 25px !important;
-
-    color: rgba(255,255,255,.78) !important;
-
-    font-family:
-        Manrope,
-        Arial,
-        sans-serif !important;
-
-    font-size: 1rem !important;
-
-    font-weight: 500 !important;
-
-    letter-spacing: normal !important;
-
-    line-height: 1.7 !important;
-
-    text-transform: none !important;
-}
-
-
-/* =========================================================
-   POSISI BLOK HERO
+   HERO POSITION — FINAL
    ========================================================= */
 
 .hero-content {
-    padding-top: 0 !important;
+    position: relative !important;
+
+    /* turunkan kembali isi hero agar tidak tertutup navbar */
+    padding-top: clamp(120px, 17vh, 175px) !important;
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* Heading sedikit dinaikkan dari posisi normal,
+   tapi tidak sampai menabrak navbar */
+.hero-content .hero-heading {
+    margin-top: -18px !important;
+    margin-bottom: 24px !important;
+}
 
-@media (max-width: 700px) {
 
-    .hero-content .hero-heading {
-        margin-top: -10px;
-    }
+/* Eyebrow */
+.hero-content .hero-eyebrow {
+    margin-bottom: 22px !important;
+}
 
-    .hero-content .hero-heading h1 {
-        font-size: 3rem !important;
-    }
 
-    .hero-content .hero-subtitle {
-        font-size: 1.25rem !important;
-    }
+/* Nama masjid */
+.hero-content .hero-heading h1 {
+    font-size: clamp(
+        3rem,
+        5vw,
+        4.6rem
+    ) !important;
 
-    .hero-content .hero-main-title {
-        font-size: 2.25rem !important;
-    }
+    line-height: 1 !important;
+}
 
-    .hero-content .hero-eyebrow {
-        font-size: .65rem !important;
-        letter-spacing: .12em !important;
-    }
+
+/* Peradaban Besar */
+.hero-content .hero-subtitle {
+    margin-top: 18px !important;
+}
+
+
+/* Mulai dari Masjid */
+.hero-content .hero-main-title {
+    margin-top: 3px !important;
 }
