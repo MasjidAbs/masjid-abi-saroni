@@ -2566,3 +2566,89 @@ footer .brand-mark {
         display: none;
     }
 }
+/* =========================================
+   CENTER PRAYER HEADING
+   ========================================= */
+
+.prayer-heading {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0 auto 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+
+    text-align: center;
+}
+
+
+/* Judul benar-benar berada di tengah */
+.prayer-heading h2 {
+    margin: 0;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* Garis dekorasi kiri */
+.prayer-heading-line {
+    position: absolute;
+
+    width: 65px;
+    height: 2px;
+
+    left: calc(50% - 315px);
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c89b3c
+    );
+}
+
+
+/* Garis dekorasi kanan */
+.prayer-heading-line:last-child {
+    left: auto;
+    right: calc(50% - 315px);
+
+    background: linear-gradient(
+        90deg,
+        #c89b3c,
+        transparent
+    );
+}
+
+
+/* Hilangkan ikon dekorasi */
+.prayer-heading-icon {
+    display: none !important;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .prayer-heading h2 {
+        white-space: normal;
+    }
+
+    .prayer-heading-line {
+        display: none;
+    }
+}
