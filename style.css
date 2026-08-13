@@ -2969,3 +2969,219 @@ footer .brand-mark {
 .hero-content .hero-main-title {
     margin-top: 3px !important;
 }
+/* =========================================================
+   HERO — RESET POSITION AGAR TIDAK TERPOTONG
+   ========================================================= */
+
+.hero-home .hero-content {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: min(1140px, 90%) !important;
+    max-width: 1140px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-top: 150px !important;
+    padding-bottom: 100px !important;
+}
+
+
+/* Reset posisi heading */
+.hero-home .hero-heading {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+
+    width: 100% !important;
+    max-width: 760px !important;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.hero-home .hero-eyebrow {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    margin: 0 0 24px !important;
+
+    color: #d3a63c !important;
+
+    font-family: Manrope, Arial, sans-serif !important;
+
+    font-size: .78rem !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .16em !important;
+    line-height: 1 !important;
+
+    text-transform: uppercase !important;
+}
+
+
+/* hanya satu garis */
+.hero-home .hero-eyebrow-line {
+    display: block !important;
+
+    width: 28px !important;
+    height: 2px !important;
+
+    flex: 0 0 28px !important;
+
+    background: #d3a63c !important;
+}
+
+
+/* =========================================================
+   JUDUL UTAMA
+   ========================================================= */
+
+.hero-home .hero-heading h1 {
+    position: static !important;
+
+    margin: 0 !important;
+
+    color: #fff !important;
+
+    font-family: "DM Serif Display", Georgia, serif !important;
+
+    font-size: clamp(3rem, 5vw, 4.8rem) !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: -.045em !important;
+
+    line-height: 1 !important;
+
+    text-transform: none !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   PERADABAN BESAR
+   ========================================================= */
+
+.hero-home .hero-subtitle {
+    margin: 20px 0 0 !important;
+
+    color: #fff !important;
+
+    font-family: Manrope, Arial, sans-serif !important;
+
+    font-size: clamp(1.3rem, 2vw, 1.8rem) !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: -.02em !important;
+
+    line-height: 1.1 !important;
+
+    text-transform: none !important;
+}
+
+
+/* =========================================================
+   MULAI DARI MASJID
+   ========================================================= */
+
+.hero-home .hero-main-title {
+    margin: 3px 0 0 !important;
+
+    color: #d3a63c !important;
+
+    font-family: "DM Serif Display", Georgia, serif !important;
+
+    font-size: clamp(2.2rem, 3.8vw, 3.5rem) !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: -.035em !important;
+
+    line-height: 1.05 !important;
+
+    text-transform: none !important;
+}
+
+
+/* =========================================================
+   PARAGRAF
+   ========================================================= */
+
+.hero-home .hero-copy {
+    max-width: 600px !important;
+
+    margin: 24px 0 0 !important;
+
+    color: rgba(255,255,255,.78) !important;
+
+    font-family: Manrope, Arial, sans-serif !important;
+
+    font-size: 1rem !important;
+
+    font-weight: 500 !important;
+
+    letter-spacing: normal !important;
+
+    line-height: 1.7 !important;
+
+    text-transform: none !important;
+}
+
+
+/* =========================================================
+   HAPUS ELEMEN LAMA
+   ========================================================= */
+
+.hero-home .hero-badge,
+.hero-home .hero-tagline {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-home .hero-content {
+        width: min(92%, 600px) !important;
+
+        padding-top: 120px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .hero-home .hero-heading h1 {
+        font-size: 3rem !important;
+    }
+
+    .hero-home .hero-subtitle {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-home .hero-main-title {
+        font-size: 2.2rem !important;
+    }
+}
