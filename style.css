@@ -5052,6 +5052,10 @@ footer .brand-mark {
 
 /* ---------- BUTTON ---------- */
 
+/* =========================================================
+   TOMBOL PILIH LAYANAN
+   ========================================================= */
+
 .service-button {
   margin-top: auto;
 
@@ -5064,27 +5068,38 @@ footer .brand-mark {
 
   border-radius: 999px;
 
-  background: linear-gradient(
-    90deg,
-    #005b48,
-    #009b78
-  );
-
+  background: #007d68;
   color: #ffffff;
 
   text-decoration: none;
 
   font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.2px;
 
-  letter-spacing: 0.3px;
+  border: 1px solid transparent;
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.25s ease;
 }
 
+
+/* Saat cursor diarahkan ke tombol */
+.service-button:hover {
+  background: #d2a13a;
+  color: #ffffff;
+
+  border-color: #c7962c;
+
+  box-shadow:
+    0 8px 20px rgba(201, 150, 44, 0.25);
+
+  transform: translateY(-2px);
+}
 .service-button:hover {
   background: linear-gradient(
     90deg,
@@ -5180,4 +5195,9 @@ footer .brand-mark {
   background: #fff;
   color: #b98522;
   transform: translateY(-2px);
+}
+.service-card:hover .service-button {
+  background: #d2a13a;
+  border-color: #c7962c;
+  box-shadow: 0 8px 20px rgba(201, 150, 44, 0.22);
 }
