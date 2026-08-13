@@ -3529,10 +3529,10 @@ footer .brand-mark {
 
 /* LOGO */
 .site-header .brand-mark img {
-    width: 58px !important;
+    width: 120px !important;
     height: auto !important;
 
-    max-height: 48px !important;
+    max-height: 60px !important;
 
     object-fit: contain !important;
 }
