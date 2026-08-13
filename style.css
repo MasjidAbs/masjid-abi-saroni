@@ -738,8 +738,9 @@ body.page-top .site-header:not(.scrolled) {
 .brand-mark,
 body:not(.page-top) .brand-mark,
 footer .brand-mark {
-    width: 82px;
-    height: 62px;
+  width: 125px; 
+  height: 62px;
+  
 
     display: flex !important;
     align-items: center !important;
