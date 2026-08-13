@@ -3185,3 +3185,268 @@ footer .brand-mark {
         font-size: 2.2rem !important;
     }
 }
+/* =========================================================
+   HERO — FINAL POSITION RESET
+   ========================================================= */
+
+.hero-home {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+
+/* Container hero dikunci ke tengah */
+.hero-home .hero-content {
+    position: absolute !important;
+
+    top: 175px !important;
+    left: 50% !important;
+
+    width: min(1140px, 90%) !important;
+    max-width: 1140px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 5 !important;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.hero-home .hero-heading {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 760px !important;
+
+    margin: 0 0 24px !important;
+
+    padding: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* Eyebrow */
+.hero-home .hero-eyebrow {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    margin: 0 0 24px !important;
+
+    color: #d3a63c !important;
+
+    font-family: Manrope, Arial, sans-serif !important;
+
+    font-size: .78rem !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .16em !important;
+    line-height: 1 !important;
+
+    text-transform: uppercase !important;
+}
+
+
+/* Garis kecil gold */
+.hero-home .hero-eyebrow-line {
+    display: block !important;
+
+    width: 28px !important;
+    height: 2px !important;
+
+    flex: 0 0 28px !important;
+
+    background: #d3a63c !important;
+}
+
+
+/* =========================================================
+   NAMA MASJID
+   ========================================================= */
+
+.hero-home .hero-heading h1 {
+    position: static !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #ffffff !important;
+
+    font-family:
+        "DM Serif Display",
+        Georgia,
+        serif !important;
+
+    font-size: clamp(
+        3.2rem,
+        5vw,
+        4.8rem
+    ) !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: -.045em !important;
+
+    line-height: .98 !important;
+
+    text-transform: none !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   PERADABAN BESAR
+   ========================================================= */
+
+.hero-home .hero-subtitle {
+    display: block !important;
+
+    margin: 20px 0 0 !important;
+    padding: 0 !important;
+
+    color: #ffffff !important;
+
+    font-family:
+        Manrope,
+        Arial,
+        sans-serif !important;
+
+    font-size: clamp(
+        1.35rem,
+        2vw,
+        1.8rem
+    ) !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: -.02em !important;
+
+    line-height: 1.1 !important;
+
+    text-transform: none !important;
+}
+
+
+/* =========================================================
+   MULAI DARI MASJID
+   ========================================================= */
+
+.hero-home .hero-main-title {
+    display: block !important;
+
+    margin: 3px 0 0 !important;
+    padding: 0 !important;
+
+    color: #d3a63c !important;
+
+    font-family:
+        "DM Serif Display",
+        Georgia,
+        serif !important;
+
+    font-size: clamp(
+        2.25rem,
+        3.8vw,
+        3.5rem
+    ) !important;
+
+    font-weight: 400 !important;
+
+    letter-spacing: -.035em !important;
+
+    line-height: 1.05 !important;
+
+    text-transform: none !important;
+}
+
+
+/* =========================================================
+   DESKRIPSI
+   ========================================================= */
+
+.hero-home .hero-copy {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 600px !important;
+
+    margin: 25px 0 0 !important;
+    padding: 0 !important;
+
+    color: rgba(255,255,255,.78) !important;
+
+    font-family:
+        Manrope,
+        Arial,
+        sans-serif !important;
+
+    font-size: 1rem !important;
+
+    font-weight: 500 !important;
+
+    letter-spacing: normal !important;
+
+    line-height: 1.7 !important;
+
+    text-transform: none !important;
+}
+
+
+/* =========================================================
+   TOMBOL
+   ========================================================= */
+
+.hero-home .hero-actions {
+    margin-top: 26px !important;
+}
+
+
+/* =========================================================
+   HAPUS STYLE LAMA
+   ========================================================= */
+
+.hero-home .hero-badge,
+.hero-home .hero-tagline {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-home .hero-content {
+        position: absolute !important;
+
+        top: 125px !important;
+
+        width: 92% !important;
+    }
+
+    .hero-home .hero-heading h1 {
+        font-size: 3rem !important;
+    }
+
+    .hero-home .hero-subtitle {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-home .hero-main-title {
+        font-size: 2.2rem !important;
+    }
+}
