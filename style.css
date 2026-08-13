@@ -2652,3 +2652,98 @@ footer .brand-mark {
         display: none;
     }
 }
+/* =========================================================
+   FINAL FIX — PRAYER HEADING EXACT CENTER
+   ========================================================= */
+
+.prayer-heading {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto;
+
+    margin: 0 auto 42px !important;
+
+    display: block !important;
+
+    text-align: center !important;
+}
+
+
+/* JUDUL DIKUNCI TEPAT DI TENGAH */
+.prayer-heading h2 {
+    position: relative !important;
+
+    left: 50% !important;
+
+    width: max-content !important;
+    max-width: 90%;
+
+    margin: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    text-align: center !important;
+
+    white-space: nowrap !important;
+
+    z-index: 2;
+}
+
+
+/* GARIS KIRI */
+.prayer-heading .prayer-heading-line:first-child {
+    position: absolute !important;
+
+    left: calc(50% - 350px) !important;
+
+    top: 50% !important;
+
+    width: 65px !important;
+    height: 2px !important;
+
+    transform: translateY(-50%) !important;
+
+    margin: 0 !important;
+}
+
+
+/* GARIS KANAN */
+.prayer-heading .prayer-heading-line:last-child {
+    position: absolute !important;
+
+    right: calc(50% - 350px) !important;
+    left: auto !important;
+
+    top: 50% !important;
+
+    width: 65px !important;
+    height: 2px !important;
+
+    transform: translateY(-50%) !important;
+
+    margin: 0 !important;
+}
+
+
+/* HAPUS IKON RUMAH */
+.prayer-heading .prayer-heading-icon {
+    display: none !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    .prayer-heading h2 {
+        width: 90% !important;
+
+        white-space: normal !important;
+    }
+
+    .prayer-heading .prayer-heading-line {
+        display: none !important;
+    }
+}
