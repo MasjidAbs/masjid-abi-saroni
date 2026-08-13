@@ -4410,3 +4410,774 @@ footer .brand-mark {
     }
 
 }
+/* =====================================================
+   LAYANAN PUBLIK MASJID ABI SA'RONI
+===================================================== */
+
+.public-services {
+  position: relative;
+  padding: 110px 0 120px;
+  background: #f8f8f5;
+  overflow: hidden;
+}
+
+/* subtle background glow */
+.public-services::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 80px;
+  left: -250px;
+  background: radial-gradient(
+    circle,
+    rgba(199, 151, 52, 0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.public-services .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.services-heading {
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.services-heading h2 {
+  margin: 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(38px, 4.2vw, 62px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  color: #063f3d;
+}
+
+.services-heading h2 span {
+  color: #063f3d;
+}
+
+.services-heading h2 strong {
+  color: #c9952e;
+  font-weight: 400;
+}
+
+
+/* garis di bawah judul */
+
+.services-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 24px auto 0;
+}
+
+.services-divider span {
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c9952e
+  );
+}
+
+.services-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    #c9952e,
+    transparent
+  );
+}
+
+.services-divider i {
+  color: #c9952e;
+  font-size: 18px;
+  font-style: normal;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+/* =========================
+   CARD DASAR
+========================= */
+
+.service-card {
+  position: relative;
+  min-height: 390px;
+  padding: 34px 38px 32px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(201, 149, 46, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* efek hover */
+
+.service-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(3, 55, 52, 0.16);
+}
+
+
+/* =========================
+   CARD HIJAU
+========================= */
+
+.service-dark {
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(213, 190, 117, 0.65),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(91, 135, 119, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #064a46 0%,
+      #073c3a 55%,
+      #0a5550 100%
+    );
+}
+
+
+/* pola dekoratif */
+
+.service-dark::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -70px;
+  top: -30px;
+
+  opacity: 0.13;
+
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.5) 0,
+      rgba(255,255,255,0.5) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.5) 0,
+      rgba(255,255,255,0.5) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+
+/* =========================
+   CARD CREAM
+========================= */
+
+.service-light {
+  color: #063f3d;
+
+  background:
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(244, 204, 113, 0.55),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(255,255,255,0.9),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #fffdf8 0%,
+      #f8f0df 55%,
+      #f2dfb8 100%
+    );
+}
+
+
+/* pola card cream */
+
+.service-light::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -50px;
+  top: -40px;
+
+  opacity: 0.10;
+
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #c9952e 0,
+      #c9952e 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      #c9952e 0,
+      #c9952e 1px,
+      transparent 1px,
+      transparent 12px
+    );
+
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 76px;
+  height: 76px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 27px;
+
+  font-size: 29px;
+
+  color: #e2b347;
+
+  border: 1.5px solid #e2b347;
+
+  background: rgba(4, 53, 50, 0.25);
+}
+
+.service-light .service-icon {
+  color: #c9952e;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7e4ae,
+      #dba83d
+    );
+
+  border: none;
+
+  box-shadow:
+    0 8px 18px rgba(148, 105, 29, 0.18);
+}
+
+
+/* =========================
+   NOMOR
+========================= */
+
+.service-number {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 8px;
+
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 25px;
+  color: #d9a83c;
+}
+
+
+/* =========================
+   JUDUL CARD
+========================= */
+
+.service-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 15px;
+
+  font-family: "DM Serif Display", Georgia, serif;
+
+  font-size: 30px;
+  line-height: 1.1;
+
+  font-weight: 400;
+}
+
+.service-dark h3 {
+  color: #ffffff;
+}
+
+.service-light h3 {
+  color: #063f3d;
+}
+
+
+/* =========================
+   DESKRIPSI
+========================= */
+
+.service-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  max-width: 430px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.service-dark p {
+  color: rgba(255,255,255,0.88);
+}
+
+.service-light p {
+  color: #4d5958;
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.service-link {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: auto;
+  padding-top: 28px;
+
+  width: fit-content;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+
+  color: #e3b447;
+
+  transition: gap 0.25s ease;
+}
+
+.service-link span {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.service-link:hover {
+  gap: 19px;
+}
+
+.service-light .service-link {
+  color: #c38d22;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .public-services {
+    padding: 75px 20px 80px;
+  }
+
+  .services-heading {
+    margin-bottom: 40px;
+  }
+
+  .services-heading h2 {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .services-divider span {
+    width: 70px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    min-height: 360px;
+    padding: 28px;
+  }
+
+  .service-card h3 {
+    font-size: 27px;
+  }
+
+}
+/* =========================================================
+   LAYANAN PUBLIK MASJID ABI SA'RONI
+   ========================================================= */
+
+.public-services {
+  background: #ffffff;
+  padding: 100px 0 110px;
+}
+
+.public-services .container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* ---------- HEADING ---------- */
+
+.services-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.services-heading h2 {
+  margin: 0;
+  color: #003f3a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.services-heading h2 span {
+  color: #c9962e;
+}
+
+.heading-line {
+  width: 70px;
+  height: 2px;
+  background: #c9962e;
+  margin: 18px auto 0;
+}
+
+
+/* ---------- GRID ---------- */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+
+/* ---------- CARD ---------- */
+
+.service-card {
+  position: relative;
+
+  min-height: 330px;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6e3dc;
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 55, 50, 0.06);
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* ---------- HOVER CARD ---------- */
+
+.service-card:hover {
+  background: linear-gradient(
+    135deg,
+    #fffdf7 0%,
+    #f8edcf 100%
+  );
+
+  border-color: #d7b15b;
+
+  box-shadow:
+    0 18px 40px rgba(150, 110, 30, 0.13);
+
+  transform: translateY(-5px);
+}
+
+
+/* ---------- ICON ---------- */
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background: #faf5e8;
+  border: 1px solid #ead9b3;
+
+  color: #c9962e;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.service-card:hover .service-icon {
+  background: #ffffff;
+  color: #b78322;
+}
+
+
+/* ---------- NOMOR ---------- */
+
+.service-number {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #c9962e;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* ---------- TITLE ---------- */
+
+.service-card h3 {
+  margin: 0 0 12px;
+
+  color: #003f3a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.service-card p {
+  margin: 0;
+
+  color: #66716f;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.service-button {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 43px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #005b48,
+    #009b78
+  );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.service-button:hover {
+  background: linear-gradient(
+    90deg,
+    #004c3e,
+    #00896c
+  );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 105, 85, 0.2);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .public-services {
+    padding: 70px 0 80px;
+  }
+
+  .public-services .container {
+    width: min(100% - 28px, 500px);
+  }
+
+  .services-heading {
+    margin-bottom: 35px;
+  }
+
+  .services-heading h2 {
+    font-size: 34px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: 300px;
+    padding: 25px;
+  }
+
+}
+.service-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background: #fbf7ed;
+  border: 1px solid #e8d5a7;
+
+  color: #c9962e;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-icon svg {
+  width: 24px;
+  height: 24px;
+
+  fill: none;
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card:hover .service-icon {
+  background: #fff;
+  color: #b98522;
+  transform: translateY(-2px);
+}
