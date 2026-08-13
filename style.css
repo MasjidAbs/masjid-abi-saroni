@@ -2747,3 +2747,177 @@ footer .brand-mark {
         display: none !important;
     }
 }
+/* =========================================================
+   HERO HEADING — MASJID ABI SA'RONI
+   Inspired by the visual hierarchy of Masjid Istiqlal
+   ========================================================= */
+
+.hero-heading {
+    position: relative;
+
+    margin-top: -28px;
+    margin-bottom: 28px;
+
+    max-width: 760px;
+}
+
+
+/* EYEBROW
+--------------------------------------------------------- */
+
+.hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    color: #d3a63c;
+
+    font-size: .78rem;
+    font-weight: 800;
+
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    line-height: 1;
+}
+
+.hero-eyebrow-line {
+    width: 28px;
+    height: 2px;
+
+    flex: 0 0 auto;
+
+    background: #d3a63c;
+}
+
+
+/* NAMA MASJID
+--------------------------------------------------------- */
+
+.hero-heading h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "DM Serif Display", Georgia, serif;
+
+    font-size: clamp(
+        3.4rem,
+        5.2vw,
+        5.2rem
+    );
+
+    font-weight: 400;
+
+    letter-spacing: -.045em;
+
+    line-height: .98;
+}
+
+
+/* "PERADABAN BESAR"
+--------------------------------------------------------- */
+
+.hero-subtitle {
+    margin: 20px 0 0;
+
+    color: #ffffff;
+
+    font-family:
+        Manrope,
+        Arial,
+        sans-serif;
+
+    font-size: clamp(
+        1.35rem,
+        2vw,
+        2rem
+    );
+
+    font-weight: 800;
+
+    letter-spacing: -.025em;
+
+    line-height: 1.1;
+}
+
+
+/* "MULAI DARI MASJID"
+--------------------------------------------------------- */
+
+.hero-main-title {
+    margin: 4px 0 0;
+
+    color: #d3a63c;
+
+    font-family: "DM Serif Display", Georgia, serif;
+
+    font-size: clamp(
+        2.35rem,
+        4vw,
+        3.8rem
+    );
+
+    font-weight: 400;
+
+    letter-spacing: -.035em;
+
+    line-height: 1.05;
+}
+
+
+/* DESKRIPSI
+--------------------------------------------------------- */
+
+.hero-heading + .hero-copy {
+    max-width: 610px;
+
+    margin-top: 24px;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: 1.02rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-heading {
+        margin-top: -10px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 18px;
+
+        font-size: .65rem;
+
+        letter-spacing: .13em;
+    }
+
+    .hero-heading h1 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        margin-top: 16px;
+
+        font-size: 1.25rem;
+    }
+
+    .hero-main-title {
+        font-size: 2.25rem;
+    }
+}
+.hero-tagline,
+.hero-tagline em {
+    color: inherit;
+    font-style: normal;
+}
