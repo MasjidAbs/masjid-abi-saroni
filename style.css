@@ -738,8 +738,13 @@ body.page-top .site-header:not(.scrolled) {
 .brand-mark,
 body:not(.page-top) .brand-mark,
 footer .brand-mark {
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 62px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
     overflow: visible;
     border: 0;
     border-radius: 0;
@@ -754,7 +759,13 @@ footer .brand-mark {
 }
 
 .site-header .brand {
-    gap: 13px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    gap: 13px !important;
+
+    height: 100% !important;
 }
 
 .site-header .brand-mark {
