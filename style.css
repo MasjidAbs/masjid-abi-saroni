@@ -738,8 +738,8 @@ body.page-top .site-header:not(.scrolled) {
 .brand-mark,
 body:not(.page-top) .brand-mark,
 footer .brand-mark {
-    width: 42px;
-    height: 42px;
+    width: 64px;
+    height: 64px;
     overflow: visible;
     border: 0;
     border-radius: 0;
@@ -3499,4 +3499,48 @@ footer .brand-mark {
     letter-spacing: -1.5px !important;
 
     text-transform: none !important;
+}
+/* =========================================
+   NAVBAR — SEDIKIT LEBIH LEBAR & LOGO LEBIH JELAS
+   ========================================= */
+
+.site-header .navigation {
+    width: 97% !important;
+    max-width: 1400px !important;
+
+    min-height: 68px !important;
+
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+
+/* LOGO */
+.site-header .brand-mark img {
+    width: 58px !important;
+    height: auto !important;
+
+    max-height: 48px !important;
+
+    object-fit: contain !important;
+}
+
+
+/* area logo sedikit lebih lega */
+.site-header .brand {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* menu tetap rapi di tengah */
+.site-header .nav-links {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 28px !important;
 }
