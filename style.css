@@ -5579,3 +5579,68 @@ footer .brand-mark {
   }
 
 }
+/* =========================================
+   BADGE WAKTU SHOLAT BERIKUTNYA
+   ========================================= */
+
+.prayer-item {
+    position: relative;
+}
+
+.prayer-next-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 12px;
+
+    background: #006b5f;
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    line-height: 1;
+    white-space: nowrap;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    z-index: 5;
+}
+
+/* Card yang sedang menjadi waktu berikutnya */
+.prayer-item.is-next {
+    position: relative;
+}
+
+/* Countdown */
+.prayer-countdown strong {
+    font-weight: 700;
+}
+
+.countdown-dot {
+    width: 8px;
+    height: 8px;
+
+    display: inline-block;
+
+    margin-right: 8px;
+
+    background: #d39b2c;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 5px rgba(211, 155, 44, 0.12);
+}
+
+.countdown-separator {
+    margin: 0 8px;
+    color: #c9982d;
+}
