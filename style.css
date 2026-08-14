@@ -4456,12 +4456,13 @@ footer .brand-mark {
     margin: 0;
 
     font-family: "DM Serif Display", Georgia, serif;
-    font-size: clamp(28px, 2.5vw, 34px);
-    line-height: 1.15;
-    font-weight: 400;
-    letter-spacing: -0.3px;
 
-    color: #055F41;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+
+    color: #063f3d;
 }
 
 .services-heading h2 span {
@@ -5643,4 +5644,12 @@ footer .brand-mark {
 .countdown-separator {
     margin: 0 8px;
     color: #c9982d;
+}
+/* FINAL OVERRIDE - JUDUL LAYANAN PUBLIK */
+.public-services .services-heading h2 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+    font-weight: 400 !important;
+    margin: 0 !important;
 }
