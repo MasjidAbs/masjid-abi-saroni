@@ -5645,11 +5645,16 @@ footer .brand-mark {
     margin: 0 8px;
     color: #c9982d;
 }
-/* FINAL OVERRIDE - JUDUL LAYANAN PUBLIK */
+/* =========================================
+   HEADING LAYANAN PUBLIK
+   ========================================= */
+
 .public-services .services-heading h2 {
+    font-family: "DM Serif Display", Georgia, serif !important;
     font-size: 30px !important;
     line-height: 1.2 !important;
-    letter-spacing: -0.5px !important;
     font-weight: 400 !important;
+    letter-spacing: -0.5px !important;
+    color: #063f3d !important;
     margin: 0 !important;
 }
