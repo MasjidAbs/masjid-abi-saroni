@@ -5692,3 +5692,57 @@ footer .brand-mark {
 .footer-brand > div {
     display: none;
 }
+/* =========================================
+   TOMBOL INFAQ
+   ========================================= */
+
+.cta-actions .btn-infaq {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 0 28px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        135deg,
+        #f4d37a 0%,
+        #d4a32c 50%,
+        #b98518 100%
+    );
+
+    color: #063f3d !important;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 8px 20px rgba(190, 143, 36, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.cta-actions .btn-infaq:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #ffe59a 0%,
+        #e2b641 50%,
+        #c99620 100%
+    );
+
+    box-shadow:
+        0 12px 28px rgba(190, 143, 36, 0.32);
+}
