@@ -407,15 +407,16 @@ body.page-top .site-header:not(.scrolled) {
 }
 
 .footer-logo-mark {
-    width: 58px;
-    height: 58px;
-    flex: 0 0 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,.96);
-    border-radius: 14px;
-    padding: 7px;
+    width: 190px;
+    height: auto;
+    flex: 0 0 auto;
+
+    display: block;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 .footer-logo-mark img {
@@ -5675,4 +5676,19 @@ footer .brand-mark {
 
 .news-heading h2 span {
     color: inherit !important;
+}
+/* =========================================
+   FOOTER LOGO
+   ========================================= */
+
+.footer-logo {
+    display: block;
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Hilangkan teks branding lama di footer */
+.footer-brand > div {
+    display: none;
 }
