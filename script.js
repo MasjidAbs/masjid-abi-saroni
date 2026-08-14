@@ -257,11 +257,10 @@ function startPrayerCountdown(prayerTimes) {
             `${String(seconds).padStart(2, '0')}`;
 
         countdownElement.innerHTML = `
-            <span class="countdown-dot"></span>
-            Menuju <strong>${nextPrayer.name}</strong>
-            <span class="countdown-separator">·</span>
-            <strong>${formattedTime}</strong>
-        `;
+    Menuju <strong>${nextPrayer.name}</strong>
+    <span class="countdown-separator">·</span>
+    <strong>${formattedTime}</strong>
+`;
     }
 
     // Jalankan langsung
