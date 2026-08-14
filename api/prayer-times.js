@@ -1,6 +1,6 @@
 module.exports = async (request, response) => {
   try {
-    const source = await fetch('https://www.muslimkita.id/api/jadwal-sholat/v1/kediri');
+    const source = await fetch('https://www.muslimkita.id/api/jadwal-sholat/v1/kediri?metode=kemenag');
     if (!source.ok) throw new Error('Sumber jadwal tidak merespons');
     const payload = await source.json();
     const schedule = payload?.jadwal;
