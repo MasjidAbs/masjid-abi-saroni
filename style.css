@@ -5651,10 +5651,28 @@ footer .brand-mark {
 
 .public-services .services-heading h2 {
     font-family: "DM Serif Display", Georgia, serif !important;
-    font-size: 30px !important;
+    font-size: 42px !important;
     line-height: 1.2 !important;
     font-weight: 400 !important;
     letter-spacing: -0.5px !important;
     color: #063f3d !important;
     margin: 0 !important;
+}
+/* =========================================
+   HEADING BERITA
+   ========================================= */
+
+.news-heading h2 {
+    font-family: "DM Serif Display", Georgia, serif !important;
+    font-size: 42px !important;
+    line-height: 1.2 !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.5px !important;
+    color: #063f3d !important;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+.news-heading h2 span {
+    color: inherit !important;
 }
