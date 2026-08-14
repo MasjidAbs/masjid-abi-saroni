@@ -5851,3 +5851,84 @@ a[href*="infaq"]:hover {
     box-shadow:
         0 12px 28px rgba(181, 137, 31, 0.32) !important;
 }
+/* =========================================
+   HOVER TOMBOL PILIH LAYANAN
+   ========================================= */
+
+.service-card .service-button:hover,
+.service-card a[href*="layanan"]:hover,
+.service-card a[href*="service"]:hover {
+    background: linear-gradient(
+        135deg,
+        #f4d37a 0%,
+        #d4a32c 50%,
+        #b98518 100%
+    ) !important;
+
+    color: #063f3d !important;
+
+    border-color: transparent !important;
+
+    box-shadow:
+        0 8px 20px rgba(181, 137, 31, 0.25) !important;
+
+    transform: translateY(-2px);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+/* =========================================
+   TOMBOL PILIH LAYANAN
+   NORMAL = HIJAU GRADASI
+   HOVER = EMAS GRADASI
+   ========================================= */
+
+.service-card .service-button,
+.service-card a[href*="layanan"],
+.service-card a[href*="service"] {
+    background: linear-gradient(
+        135deg,
+        #0f766e 0%,
+        #087f6d 50%,
+        #056546 100%
+    ) !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 999px !important;
+
+    box-shadow:
+        0 5px 14px rgba(15, 118, 110, 0.22) !important;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+
+/* HOVER → EMAS */
+
+.service-card .service-button:hover,
+.service-card a[href*="layanan"]:hover,
+.service-card a[href*="service"]:hover {
+    background: linear-gradient(
+        135deg,
+        #f4d37a 0%,
+        #d4a32c 50%,
+        #b98518 100%
+    ) !important;
+
+    color: #063f3d !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 20px rgba(181, 137, 31, 0.35) !important;
+}
