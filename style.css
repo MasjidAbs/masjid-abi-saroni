@@ -5932,3 +5932,274 @@ a[href*="infaq"]:hover {
     box-shadow:
         0 8px 20px rgba(181, 137, 31, 0.35) !important;
 }
+/* =========================================================
+   MOBILE NAVBAR
+   Desktop tidak disentuh
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       NAVBAR UTAMA
+       ========================= */
+
+    .site-header {
+        padding: 10px 12px;
+        z-index: 9999;
+    }
+
+    .site-header .navigation {
+        width: 100%;
+        max-width: none;
+        min-height: 62px;
+
+        padding: 8px 14px;
+
+        border-radius: 22px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       LOGO
+       ========================= */
+
+    .site-header .brand {
+        display: flex;
+        align-items: center;
+
+        gap: 0;
+
+        min-width: 0;
+    }
+
+    .site-header .brand-mark {
+        width: 145px;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .site-header .brand-logo {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+        display: block;
+    }
+
+
+    /* Sembunyikan tulisan nama masjid
+       karena sudah ada di logo */
+
+    .site-header .brand > span:not(.brand-mark) {
+        display: none;
+    }
+
+
+    /* =========================
+       HAMBURGER
+       ========================= */
+
+    .site-header .menu-toggle {
+        width: 46px;
+        height: 46px;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        background: transparent;
+
+        color: #ffffff;
+
+        font-size: 30px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       MENU DROPDOWN
+       ========================= */
+
+    .site-header .nav-links {
+        position: absolute;
+
+        top: calc(100% + 8px);
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+
+        margin: 0;
+        padding: 10px 10px 14px;
+
+        display: none;
+        flex-direction: column;
+
+        background: rgba(3, 54, 51, 0.98);
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 18px 45px rgba(0, 35, 32, 0.35);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        z-index: 9999;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Menu ketika hamburger aktif */
+
+    .site-header .menu-toggle[aria-expanded="true"]
+        + .nav-links {
+        display: flex;
+    }
+
+
+    /* =========================
+       ITEM MENU
+       ========================= */
+
+    .site-header .nav-links > li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .site-header .nav-links > li > a {
+        width: 100%;
+
+        min-height: 52px;
+
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+
+        border-radius: 14px;
+
+        color: #ffffff;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
+    }
+
+
+    /* Hover / tap */
+
+    .site-header .nav-links > li > a:hover {
+        background: rgba(212, 163, 44, 0.16);
+
+        color: #e4b94e;
+    }
+
+
+    /* =========================
+       DROPDOWN ANAK
+       ========================= */
+
+    .site-header .nav-links .dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 4px 8px 8px;
+
+        background: rgba(0, 35, 33, 0.35);
+
+        border: none;
+        box-shadow: none;
+
+        border-radius: 12px;
+    }
+
+    .site-header .nav-links .dropdown-menu a {
+        min-height: 44px;
+
+        padding-left: 28px;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       BODY
+       ========================= */
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
+/* =========================================================
+   HP KECIL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .site-header {
+        padding: 8px 10px;
+    }
+
+    .site-header .navigation {
+        min-height: 58px;
+
+        padding: 7px 12px;
+
+        border-radius: 20px;
+    }
+
+    .site-header .brand-mark {
+        width: 130px;
+    }
+
+    .site-header .menu-toggle {
+        width: 42px;
+        height: 42px;
+
+        font-size: 28px;
+    }
+
+    .site-header .nav-links {
+        left: 10px;
+        right: 10px;
+
+        border-radius: 18px;
+    }
+
+    .site-header .nav-links > li > a {
+        min-height: 50px;
+
+        font-size: 15px;
+    }
+}
